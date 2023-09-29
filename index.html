@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <meta name=robots content="noindex, noarchive">
+  <title>rilkean.com</title>
+  <style>
+    @font-face {
+      font-family: tributeot;
+      src: url(./assets/font/tributeot-roman-webfont.woff2) format(woff2),
+         url(./assets/font/tributeot-roman-webfont.woff) format(woff);
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: tributeot;
+      src: url(./assets/font/tributeot-italic-webfont.woff2) format(woff2),
+         url(./assets/font/tributeot-italic-webfont.woff) format(woff);
+      font-weight: normal;
+      font-style: italic;
+    }
+    ::selection {
+      background: mediumorchid;
+      color: white;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font: 22px/1.4 tributeot, serif; 
+    }
+    a:link {
+      color: mediumorchid;
+      text-decoration: underline;
+      text-decoration-style: wavy;
+      text-underline-offset: 0.2em;
+      text-decoration-thickness: 4px;
+      font-style: italic;
+    }
+    a:hover {
+      text-decoration-style: solid;
+      font-style: normal;
+    }
+    a:visited {
+      color: mediumorchid;
+    }
+    h1 {
+      color: mediumorchid;
+      font-size: 72px;
+      font-weight: normal;
+    }
+    header, main, img {
+      display: block;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100vh;
+    }
+    main {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      text-align: center;
+      padding: 0 20px 30px;
+      margin-top: -15vh;
+    }
+    .project {
+      padding: 30px;
+      margin: auto;
+      max-width: 100%;
+    }
+    .project a img {
+      margin-bottom: 16px;
+      border: 4px solid silver;
+      max-width: 100%;
+    }
+    .project a img:hover {
+      border: 4px solid mediumorchid;
+    }
+    @media only screen and (max-width: 414px) {
+      h1 {
+        font-size: 58px;
+      }
+      main {
+        margin-top: -140px;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .project {
+        padding: 20px;
+      }
+    }
+    @media only screen and (max-width: 1024px) {
+      main {
+        margin-top: -190px;
+      }
+    }
+  </style>
+  <header>
+    <h1><a href=https://github.com/apophatic?tab=repositories/>rilkean.com</a></h1>
+  </header>
+  <main>
+    <div class=project>
+      <a href=https://rilkean.com/art/>
+        <img src=./assets/projects/art-project.png alt=art-project title=art-project width=650>
+      </a>
+    </div>
+    <div class=project>
+      <a href=https://rilkean.com/jot/>
+        <img src=./assets/projects/jot-project.png alt=jot-project title=jot-project width=560>
+      </a>
+    </div>
+    <div class=project>
+      <a href=https://github.com/apophatic/resume/>
+        <img src=./assets/projects/resume-project.jpeg alt=resume-project title=resume-project width=440>
+      </a>
+    </div>
+  </main>
+</html>
