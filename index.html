@@ -6,18 +6,10 @@
   <title>rilkean.com</title>
   <style>
     @font-face {
-      font-family: tributeot;
-      src: url(./assets/font/tributeot-roman-webfont.woff2) format(woff2),
-         url(./assets/font/tributeot-roman-webfont.woff) format(woff);
+      font-family: ReenieBeanie;
+      src: url(./assets/font/ReenieBeanie-Regular.ttf) format(truetype);
       font-weight: normal;
       font-style: normal;
-    }
-    @font-face {
-      font-family: tributeot;
-      src: url(./assets/font/tributeot-italic-webfont.woff2) format(woff2),
-         url(./assets/font/tributeot-italic-webfont.woff) format(woff);
-      font-weight: normal;
-      font-style: italic;
     }
     ::selection {
       background: mediumorchid;
@@ -29,34 +21,37 @@
       padding: 0;
     }
     body {
-      font: 22px/1.4 tributeot, serif; 
+      font: 22px/1.4 ReenieBeanie, display; 
     }
     a:link {
       color: mediumorchid;
-      text-decoration: underline;
-      text-decoration-style: wavy;
-      text-underline-offset: 0.2em;
-      text-decoration-thickness: 4px;
-      font-style: italic;
+      text-decoration: none;
     }
     a:hover {
-      text-decoration-style: solid;
-      font-style: normal;
+      color: mediumorchid;
+      text-decoration: none;
     }
     a:visited {
       color: mediumorchid;
+      text-decoration: none;
     }
     h1 {
       color: mediumorchid;
-      font-size: 72px;
+      font-size: 108px;
       font-weight: normal;
+    }
+    h2 {
+      color: gray;
+      font-size: 48px;
+      font-weight: normal;
+      margin-top: -0.6em;
     }
     header, main, img {
       display: block;
     }
     header {
       display: flex;
-      align-items: center;
+      text-align: center;
       justify-content: center;
       flex-direction: column;
       height: 100vh;
@@ -78,15 +73,18 @@
     }
     .project a img {
       margin-bottom: 16px;
-      border: 4px solid silver;
+      border: 3px solid gainsboro;
       max-width: 100%;
     }
     .project a img:hover {
-      border: 4px solid mediumorchid;
+      border: 3px solid mediumorchid;
     }
     @media only screen and (max-width: 414px) {
       h1 {
-        font-size: 58px;
+        font-size: 78px;
+      }
+      h2 {
+        font-size: 38px;
       }
       main {
         margin-top: -140px;
@@ -104,7 +102,8 @@
     }
   </style>
   <header>
-    <h1><a href=https://github.com/apophatic?tab=repositories>rilkean.com</a></h1>
+    <h1><a href=&#109;&#97;&#105;&#108;&#116;&#111;&#58;%61%64%6D%69%6E%40%72%69%6C%6B%65%61%6E%2E%63%6F%6D>@rilkean.com</a></h1>
+    <h2>web developer</h2>
   </header>
   <main>
     <div class=project>
