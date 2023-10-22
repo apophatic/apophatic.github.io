@@ -5,49 +5,36 @@
   <meta name=viewport content=initial-scale=1>
   <meta name=robots content=noindex>
   <meta name=robots content=noarchive>
-  <title>www explorations</title>
+  <title>rilkean.com</title>
   <style>
     @font-face {
-      font-family: Barriecito;
-      src: url(./assets/font/Barriecito-Regular.ttf) format(truetype);
+      font-family: tributeot;
+      src: url(./assets/font/tributeot-roman-webfont.woff2) format(woff2),
+           url(./assets/font/tributeot-roman-webfont.woff) format(woff);
       font-weight: normal;
       font-style: normal;
     }
     ::selection {
       background: #fffdd0;
-      color: mediumorchid;
+      color: #ba55d3;
     }
     * {
-      background: mediumorchid;
+      background: #fff;
+      color: #ba55d3;
+      font-family: tributeot, serif;
+
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-    body {
-      font-family: Barriecito, system-ui; 
-    }
-    /* a:link {
-      color: #fffdd0;
-      text-decoration: none;
-    }
-    a:hover {
-      color: #fffdd0;
-      text-decoration: underline;
-      text-decoration-thickness: 0.036em;
-    }
-    a:visited {
-      color: #fffdd0;
-      text-decoration: none;
-    } */
-    h1, footer {
-      color: #fffdd0;
+    h1 {
       font-size: 92px;
       font-weight: normal;
     }
-    header, main, img, footer {
+    header, main, img {
       display: block;
     }
-    header, footer {
+    header {
       display: flex;
       text-align: center;
       justify-content: center;
@@ -64,18 +51,18 @@
       padding: 0 20px 30px;
       margin-top: -15vh;
     }
-    .project {
+    .exploration {
       padding: 30px;
       margin: auto;
       max-width: 100%;
     }
-    .project a img {
+    .exploration a img {
       margin-bottom: 16px;
-      border: 8px solid rgb(139, 64, 158);
+      border: 2px solid #d3d3d3;
       max-width: 100%;
     }
-    .project a img:hover {
-      border: 4px solid rgb(139, 64, 158);
+    .exploration a img:hover {
+      border: 2px solid #ba55d3;
     }
     @media only screen and (max-width: 414px) {
       h1 {
@@ -86,7 +73,7 @@
         padding-left: 0;
         padding-right: 0;
       }
-      .project {
+      .exploration {
         padding: 20px;
       }
     }
@@ -97,25 +84,28 @@
     }
   </style>
   <header>
-    <h1>www explorations</h1>
+    <h1>rilkean.com</h1>
   </header>
   <main>
-    <div class=project>
-      <a href=https://rilkean.com/art/>
-        <img src=./assets/projects/art-project.png alt=art-project title=art-project width=650>
+    <div class=exploration>
+      <a href=https://rilkean.com/art>
+        <img src=./assets/explorations/art-exploration.png alt=art-exploration title=art-exploration width=400>
       </a>
     </div>
-    <div class=project>
-      <a href=https://rilkean.com/jot/>
-        <img src=./assets/projects/jot-project.png alt=jot-project title=jot-project width=560>
+    <div class=exploration>
+      <a href=https://rilkean.com/jot>
+        <img src=./assets/explorations/jot-exploration.png alt=jot-exploration title=jot-exploration width=500>
       </a>
     </div>
-    <div class=project>
-      <a href=https://github.com/apophatic/resume/>
-        <img src=./assets/projects/resume-project.jpeg alt=resume-project title=resume-project width=440>
+    <div class=exploration>
+      <a href=https://rilkean.com/log>
+        <img src=./assets/explorations/log-exploration.png alt=resume-exploration title=log-exploration width=525>
+      </a>
+    </div>
+    <div class=exploration>
+      <a href=https://github.com/apophatic/resume>
+        <img src=./assets/explorations/resume-exploration.jpeg alt=log-exploration title=log-exploration width=375>
       </a>
     </div>
   </main>
-  <!-- <footer>
-  </footer> -->
 </html>
