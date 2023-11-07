@@ -2,15 +2,63 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>rilkean.com</title>
 	<link href="https://rilkean.com/atom.xml" rel="self" />
-	<updated>2023-11-07T01:16:38Z</updated>
+	<updated>2023-11-07T06:39:11Z</updated>
 	<author>
 		<name>apophatic</name>
 	</author>
 	<id>https://rilkean.com,2023-11-07:default-atom-feed/</id>
 	<entry>
+		<title>val town email rss notifications</title>
+		<content type="html">&lt;h1&gt;val town email rss notifications&lt;/h1&gt;
+&lt;p&gt;2023-11-07&lt;/p&gt;
+&lt;p&gt;I&#39;ve tried different RSS clients over the years, e.g., two of my favorite clients are the web-client &lt;a href=&quot;https://bazqux.com/&quot;&gt;BazQux&lt;/a&gt; and the self-hostable &lt;a href=&quot;https://miniflux.app/&quot;&gt;Miniflux&lt;/a&gt;. While extremely useful, it never stuck in my workflow. It might be that my preference towards a minimal setup irked me away from using yet another application and service. What I haven&#39;t tried doing is using email for RSS notifications–of course, it&#39;s self-explanatory, i.e., see newsletters.&lt;/p&gt;
+&lt;p&gt;I&#39;ve playing with &lt;a href=&quot;https://www.val.town/&quot;&gt;Val Town&lt;/a&gt; these past few days and it seems like a fun, handy tool:
+&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;Val Town is a social website to write, run, and deploy code. Vals are small JavaScript/TypeScript snippets that run on our servers. You can create APIs, scheduled functions, email yourself, and persist small pieces of data — all from the browser.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;First and foremost, inferring that my particular feeds are different from others, I create my first ever val, (1) @johndoe/rssFeeds. An &lt;code&gt;Object&lt;/code&gt; type containing keyed collections:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;export const rssFeeds = {
+  	[&amp;quot;Verso Books&amp;quot;]: &amp;quot;https://www.versobooks.com/blogs/news.atom&amp;quot;,
+  	Evonomics: &amp;quot;https://evonomics.com/feed/&amp;quot;
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, the fun begins. After reading through some vals, there are a couple that I need. &lt;/p&gt;
+&lt;p&gt;Luckily, Val Town has it&#39;s own &lt;a href=&quot;https://www.val.town/u/std&quot;&gt;standard library&lt;/a&gt; with helpful vals like &lt;a href=&quot;https://www.val.town/v/std/email&quot;&gt;std.email&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;@std.email is the web-standard and more powerful replacement for console.email.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;As you notice the (2) @std/email val references other vals like the val for parsing a SendGrid email. &lt;/p&gt;
+&lt;p&gt;Another val I need is (3) @stevekrouse/newRSSItems. Again, you see this val reference another val to fetch the RSS which references other vals to parse the XML and fetch the text, which the latter references the standard library&#39;s fetch val and another normalize the URL val. This is pretty cool! &quot;[A] network of atomic actions you can stack like Lego blocks.&quot;&lt;/p&gt;
+&lt;p&gt;To tie things up, you guessed it, I use some code from yet another val, (4) @stevekrouse/pollRSSFeeds:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;import { email } from &amp;quot;https://esm.town/v/std/email?v=11&amp;quot;;
+import { newRSSItems } from &amp;quot;https://esm.town/v/stevekrouse/newRSSItems&amp;quot;;
+import { rssFeeds } from &amp;quot;https://esm.town/v/johndoe/rssFeeds&amp;quot;;
+
+export async function pollRSSFeeds({ lastRunAt }: Interval) {
+  return Promise.all(
+    Object.entries(rssFeeds).map(async ([name, url]) =&amp;gt; {
+      let items = await newRSSItems({
+        url,
+        lastRunAt,
+      });
+      if (items.length)
+        await email({
+          text: JSON.stringify(items, null, 2),
+          subject: `New from ${name} RSS`,
+        });
+      return { name, items };
+    }),
+  );
+}
+&lt;/code&gt;&lt;/pre&gt;</content>
+		<link href="https://rilkean.com/val-town-email-rss-feed"/>
+		<id>https://rilkean.com/val-town-email-rss-feed</id>
+		<updated>2023-11-07T10:00:00Z</updated>
+		<published>2023-11-07T10:00:00Z</published>
+	</entry>
+	<entry>
 		<title>the cost of modern webdev</title>
 		<content type="html">&lt;h1&gt;the cost of modern webdev&lt;/h1&gt;
-&lt;p&gt;October 17, 2023&lt;/p&gt;
+&lt;p&gt;2023-10-17&lt;/p&gt;
 &lt;p&gt;I was un-installing unnecessary packages I had installed with &lt;code&gt;brew&lt;/code&gt; and realized there were far too many to account for. Instead of going through each package in &lt;code&gt;brew list&lt;/code&gt; and looking up the respective purpose, I decided to purge the entire formulae:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;brew remove --force $(brew list --formula)
 &lt;/code&gt;&lt;/pre&gt;
@@ -18,13 +66,13 @@
 &lt;p&gt;&lt;code&gt;brew install node&lt;/code&gt; requires 58MB, not to mention its required dependencies which account for another ~242MB. Then there is &lt;code&gt;node_modules&lt;/code&gt; in an application, and all the &lt;code&gt;&amp;quot;dependencies&amp;quot;&lt;/code&gt; and &lt;code&gt;&amp;quot;devDependencies&amp;quot;&lt;/code&gt;, and their dependecies, ad infinitum. Regardless of the latter ending up in a &lt;code&gt;.gitignore&lt;/code&gt;, the memory requirements and complexity of modern web development is seemingly unnecessary.&lt;/p&gt;</content>
 		<link href="https://rilkean.com/the-cost-of-modern-webdev"/>
 		<id>https://rilkean.com/the-cost-of-modern-webdev</id>
-		<updated>October 17, 2023T10:00:00Z</updated>
-		<published>October 17, 2023T10:00:00Z</published>
+		<updated>2023-10-17T10:00:00Z</updated>
+		<published>2023-10-17T10:00:00Z</published>
 	</entry>
 	<entry>
 		<title>philos and sophia (a)</title>
 		<content type="html">&lt;h1&gt;philos and sophia (a)&lt;/h1&gt;
-&lt;p&gt;October 09, 2023&lt;/p&gt;
+&lt;p&gt;2023-10-09&lt;/p&gt;
 &lt;p&gt;The beginning of a new series, going from A-to-Z, pointing to ten interesting philosophy(-deriving) links. Although, truth be told, it might be that laying them out here is better than keeping them bookmarked.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Henri_Bergson&quot;&gt;Henri Bergson&lt;/a&gt;&lt;/p&gt;
@@ -84,13 +132,13 @@
 &lt;/ul&gt;</content>
 		<link href="https://rilkean.com/philos-and-sophia-a"/>
 		<id>https://rilkean.com/philos-and-sophia-a</id>
-		<updated>October 09, 2023T10:00:00Z</updated>
-		<published>October 09, 2023T10:00:00Z</published>
+		<updated>2023-10-09T10:00:00Z</updated>
+		<published>2023-10-09T10:00:00Z</published>
 	</entry>
 	<entry>
 		<title>accessible images: :after</title>
 		<content type="html">&lt;h1&gt;accessible images: :after&lt;/h1&gt;
-&lt;p&gt;October 23, 2023&lt;/p&gt;
+&lt;p&gt;2023-10-23&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This is an alternate form of the unnecessarily-unstyled-in a-critical-manner broken image logo and, if added, alternate text we typically see for offline images. This doesn&#39;t affect Safari-like browsers.&lt;/p&gt;
 &lt;p&gt;Styling the &lt;code&gt;img&lt;/code&gt; element to account for offline images–e.g., if (1) the image path is not found, (2) the image has been deleted, (3) the connection has been broken and the image did not load, (4) the webmaster is forbidding the image to load, and so on–is a great accessibility practice.&lt;/p&gt;
 &lt;p&gt;Like we thought for &lt;a href=&quot;/log/accessible-hyperlinks-after&quot;&gt;accessible externally-pointing hyperlinks&lt;/a&gt;, our thinking is similar here: what we are interested in is the &lt;em&gt;after-the-matter&lt;/em&gt;, i.e., &lt;code&gt;:after&lt;/code&gt;.&lt;/p&gt;
@@ -149,13 +197,13 @@ img:after {
 &lt;p&gt;This is a lot better than the default.&lt;/p&gt;</content>
 		<link href="https://rilkean.com/accessible-images-after"/>
 		<id>https://rilkean.com/accessible-images-after</id>
-		<updated>October 23, 2023T10:00:00Z</updated>
-		<published>October 23, 2023T10:00:00Z</published>
+		<updated>2023-10-23T10:00:00Z</updated>
+		<published>2023-10-23T10:00:00Z</published>
 	</entry>
 	<entry>
 		<title>accessible hyperlinks: :after</title>
 		<content type="html">&lt;h1&gt;accessible hyperlinks: :after&lt;/h1&gt;
-&lt;p&gt;October 05, 2023&lt;/p&gt;
+&lt;p&gt;2023-10-05&lt;/p&gt;
 &lt;p&gt;A way to make hyperlinks accessible is by explictly informing the user when a hyperlink points externally. An option for this would be to use a north east arrow immediately after a hyperlink to denote it is &lt;em&gt;going outside&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Now, we don&#39;t want to have to copy and paste the HTML entity, HTML code, hex code, or even the UTF-8 character itself each time for an external hyperlink. Luckily, CSS has &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors&quot;&gt;attribute selectors&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;&lt;p&gt;The CSS attribute selector matches elements based on the element having a given attribute explicitly set, with options for defining an attribute value or substring value match.&lt;/p&gt;
@@ -185,13 +233,13 @@ img:after {
 ``&lt;/code&gt;&lt;/pre&gt;</content>
 		<link href="https://rilkean.com/accessible-hyperlinks-after"/>
 		<id>https://rilkean.com/accessible-hyperlinks-after</id>
-		<updated>October 05, 2023T10:00:00Z</updated>
-		<published>October 05, 2023T10:00:00Z</published>
+		<updated>2023-10-05T10:00:00Z</updated>
+		<published>2023-10-05T10:00:00Z</published>
 	</entry>
 	<entry>
 		<title>accessible hyperlinks: :active</title>
 		<content type="html">&lt;h1&gt;accessible hyperlinks: :active&lt;/h1&gt;
-&lt;p&gt;October 21, 2023&lt;/p&gt;
+&lt;p&gt;2023-10-21&lt;/p&gt;
 &lt;p&gt;To do accessibility on the web justice, it isn&#39;t enough having hyperlinks solely differentiated by the default link color, the default &lt;code&gt;text-decoration: underline&lt;/code&gt;, and the default, when hovering, &lt;code&gt;cursor: pointer&lt;/code&gt;. I have been indifferent and susceptible to not doing this for a long time but over the years, I&#39;ve noticed this on a fair share of websites and I thought it was accessibly neat.&lt;/p&gt;
 &lt;p&gt;What I&#39;m talking about is this behavior you typically see with form inputs: an outline when you focus-in on the input field. We may just as well fully adopt it for anchor elements.&lt;/p&gt;
 &lt;p&gt;What we&#39;ll need is the &lt;code&gt;:active&lt;/code&gt; pseudo-class:&lt;/p&gt;
@@ -207,7 +255,7 @@ img:after {
 &lt;/code&gt;&lt;/pre&gt;</content>
 		<link href="https://rilkean.com/accessible-hyperlinks-active"/>
 		<id>https://rilkean.com/accessible-hyperlinks-active</id>
-		<updated>October 21, 2023T10:00:00Z</updated>
-		<published>October 21, 2023T10:00:00Z</published>
+		<updated>2023-10-21T10:00:00Z</updated>
+		<published>2023-10-21T10:00:00Z</published>
 	</entry>
 </feed>

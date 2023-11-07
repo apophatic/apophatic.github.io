@@ -57,7 +57,7 @@ EOF
 s/"/\&quot;/g; s/'"'"'/\&#39;/g')
 		post_link=$(echo "$f" | gsed -E 's|posts/(.*).md|\1|')
 		basic_date=$(echo $(head -3 "$f" | tail -1))
-		published_date=$(gdate -d $basic_date -u +"%B %d, %Y"T10:%M:%SZ)
+		published_date=$(gdate -d $basic_date -u +%Y-%m-%dT10:%M:%SZ)
 
 		cat <<EOF
 	<entry>

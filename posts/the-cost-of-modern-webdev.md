@@ -1,6 +1,6 @@
 # the cost of modern webdev
 
-October 17, 2023
+2023-10-17
 
 I was un-installing unnecessary packages I had installed with `brew` and realized there were far too many to account for. Instead of going through each package in `brew list` and looking up the respective purpose, I decided to purge the entire formulae:
 

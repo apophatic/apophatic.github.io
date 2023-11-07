@@ -1,6 +1,6 @@
 # accessible images: :after
 
-October 23, 2023
+2023-10-23
 
 **Note:** This is an alternate form of the unnecessarily-unstyled-in a-critical-manner broken image logo and, if added, alternate text we typically see for offline images. This doesn't affect Safari-like browsers.
 

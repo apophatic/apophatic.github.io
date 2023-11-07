@@ -1,6 +1,6 @@
 # accessible hyperlinks: :after
 
-October 05, 2023
+2023-10-05
 
 A way to make hyperlinks accessible is by explictly informing the user when a hyperlink points externally. An option for this would be to use a north east arrow immediately after a hyperlink to denote it is *going outside*.
 

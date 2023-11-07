@@ -1,6 +1,6 @@
 # philos and sophia (a)
 
-October 09, 2023
+2023-10-09
 
 The beginning of a new series, going from A-to-Z, pointing to ten interesting philosophy(-deriving) links. Although, truth be told, it might be that laying them out here is better than keeping them bookmarked.
 
