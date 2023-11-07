@@ -11,7 +11,6 @@ First and foremost, inferring that my particular feeds are different from others
 
 ```javascript
 export const rssFeeds = {
-  	["Verso Books"]: "https://www.versobooks.com/blogs/news.atom",
   	Evonomics: "https://evonomics.com/feed/"
 };
 ```

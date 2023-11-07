@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>rilkean.com</title>
 	<link href="https://rilkean.com/atom.xml" rel="self" />
-	<updated>2023-11-07T06:39:11Z</updated>
+	<updated>2023-11-07T07:34:47Z</updated>
 	<author>
 		<name>apophatic</name>
 	</author>
@@ -18,7 +18,6 @@
 &lt;/blockquote&gt;
 &lt;p&gt;First and foremost, inferring that my particular feeds are different from others, I create my first ever val, (1) @johndoe/rssFeeds. An &lt;code&gt;Object&lt;/code&gt; type containing keyed collections:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;export const rssFeeds = {
-  	[&amp;quot;Verso Books&amp;quot;]: &amp;quot;https://www.versobooks.com/blogs/news.atom&amp;quot;,
   	Evonomics: &amp;quot;https://evonomics.com/feed/&amp;quot;
 };
 &lt;/code&gt;&lt;/pre&gt;
