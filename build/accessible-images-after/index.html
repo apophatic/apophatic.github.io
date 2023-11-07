@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name=robots content="noindex, noarchive">
+	<link rel="icon" href="data:,">
+	<title>accessible images: :after</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+	<link href="https://rilkean.com/atom.xml" type="application/atom+xml" rel="alternate" title="Atom feed for log posts">
+</head>
+<nav>
+	<a href="/">index</a>–<a href="/atom.xml">rss</a>–<a href="/words">words</a>
+</nav>
+
+<main>
+<h1>accessible images: :after</h1>
+<p>October 23, 2023</p>
+<p><strong>Note:</strong> This is an alternate form of the unnecessarily-unstyled-in a-critical-manner broken image logo and, if added, alternate text we typically see for offline images. This doesn't affect Safari-like browsers.</p>
+<p>Styling the <code>img</code> element to account for offline images–e.g., if (1) the image path is not found, (2) the image has been deleted, (3) the connection has been broken and the image did not load, (4) the webmaster is forbidding the image to load, and so on–is a great accessibility practice.</p>
+<p>Like we thought for <a href="/log/accessible-hyperlinks-after">accessible externally-pointing hyperlinks</a>, our thinking is similar here: what we are interested in is the <em>after-the-matter</em>, i.e., <code>:after</code>.</p>
+<p>But a pre-requisite for the following is to subscribe to the seemingly most pressing accessibility issue on the web: using the <code>img</code> element's <code>alt</code> property.</p>
+<blockquote><p>The <code>HTMLImageElement</code> property <code>alt</code> provides fallback (alternate) text to display when the image specified by the <code>&lt;img&gt;</code> element is not loaded.</p>
+<p>...</p>
+<p>Perhaps the most important reason to use the <code>alt</code> property is to support accessibility, as the <code>alt</code> text may be used by screen readers and other assistive technologies to help differently-abled users make full use of your content. It will be read aloud or sent to the touch device, for example, to support visually impaired users.</p>
+</blockquote>
+<p>Now, the first on this log, something handy for our situation, a CSS function.</p>
+<blockquote><p>The <code>attr()</code> CSS function is used to retrieve the value of an attribute of the selected element and use it in the stylesheet. It can also be used on pseudo-elements, in which case the value of the attribute on the pseudo-element's originating element is returned.</p>
+</blockquote>
+<p>You may now suddenly infer what we are doing. If a visitor to our website can't retrieve a particular image, we throw out the particular <code>alt</code> text for the respective image to indicate what the image was. This is incredibly useful.</p>
+<p>And so, the meat of our task is done:</p>
+<pre><code class="language-css">img:after {
+    content: attr(alt);
+}
+</code></pre>
+<p>But what we are doing further, and this is the critical part of our situation, is styling this in a critically-conscious manner compared to the default (see the note above).</p>
+<pre><code class="language-css">img {
+    max-width: 100%;
+    min-height: 4em;
+    border: 2px dotted #ba55d3;
+
+    /* :after styling necessities */
+    display: block;
+    position: relative;
+}
+
+img:after {
+    font-size: 90%;
+
+    /* spit out the alt text */
+    content: attr(alt);
+
+    /* vertically center the alt text */
+    display: grid;
+    align-content: center;
+
+    /* horizontally center the alt text */
+    text-align: center;
+
+    /* overlap default alt text */
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /* make lack of image distinctive */
+    background-color: #410000;
+}
+</code></pre>
+<p>The result for an image not found locally of the Milky Way Galaxy:</p>
+<p><img src="../public/images/milky-way-galaxy.jpg" alt="Milky Way Galaxy" title="Milky Way Galaxy" /></p>
+<p>This is a lot better than the default.</p>
+<footer>
+  <small>To be awake and to be alive are deeds, not states (Rilke).</small>
+</footer>

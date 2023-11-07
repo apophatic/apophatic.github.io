@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name=robots content="noindex, noarchive">
+	<link rel="icon" href="data:,">
+	<title>the cost of modern webdev</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+	<link href="https://rilkean.com/atom.xml" type="application/atom+xml" rel="alternate" title="Atom feed for log posts">
+</head>
+<nav>
+	<a href="/">index</a>–<a href="/atom.xml">rss</a>–<a href="/words">words</a>
+</nav>
+
+<main>
+<h1>the cost of modern webdev</h1>
+<p>October 17, 2023</p>
+<p>I was un-installing unnecessary packages I had installed with <code>brew</code> and realized there were far too many to account for. Instead of going through each package in <code>brew list</code> and looking up the respective purpose, I decided to purge the entire formulae:</p>
+<pre><code class="language-bash">brew remove --force $(brew list --formula)
+</code></pre>
+<p>Re-installing the necessary packages, I was not surprised to infer the large memory cost of modern web development, re: Node.js-based development:</p>
+<p><code>brew install node</code> requires 58MB, not to mention its required dependencies which account for another ~242MB. Then there is <code>node_modules</code> in an application, and all the <code>&quot;dependencies&quot;</code> and <code>&quot;devDependencies&quot;</code>, and their dependecies, ad infinitum. Regardless of the latter ending up in a <code>.gitignore</code>, the memory requirements and complexity of modern web development is seemingly unnecessary.</p>
+<footer>
+  <small>To be awake and to be alive are deeds, not states (Rilke).</small>
+</footer>

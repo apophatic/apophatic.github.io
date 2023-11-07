@@ -1,0 +1,114 @@
+@font-face {
+  font-family: tributeot;
+  src: url(./public/font/tributeot-roman-webfont.woff2) format(woff2),
+         url(./public/font/tributeot-roman-webfont.woff) format(woff);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Space Mono;
+  src: url(./public/font/SpaceMono-Regular.ttf) format(truetype);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Space Mono;
+  src: url(./public/font/SpaceMono-Italic.ttf) format(truetype);
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: Space Mono;
+  src: url(./public/font/SpaceMono-Bold.ttf) format(truetype);
+  font-weight: Bold;
+  font-style: normal;
+}
+::selection {
+  background: #853d97;
+  color: #ffcccc;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font: 20px/1.3 tributeot, serif;
+  background: #381525;
+  color: #ffcccc;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 1rem;
+}
+a:link {
+  color: #ba55d3;
+}
+a:hover {
+  color: #ba55d3;
+}
+a:visited {
+  color: #ba55d3;
+}
+a:active {
+  outline: 1px dotted #ba55d3;
+}
+a[href*="//"]:after {
+  font-family: Space Mono, monospace;
+  font-size: 0.8em;
+  content: "\2197";
+}
+h1, h2, h3, h4 {
+  font-weight: normal;
+}
+hr {
+  background-color: gray;
+  border: 0;
+  height: 2px;
+}
+nav {
+  margin-top: 2rem;
+}
+img {
+  max-width: 100%;
+  min-height: 4em;
+  border: 2px dotted #ba55d3;
+
+  /* :after styling necessities */
+  display: block;
+  position: relative;
+}
+img::after {
+  font-size: 90%;
+
+  /* spit out the alt text */
+  content: attr(alt);
+
+  /* vertically center the alt text */
+  display: grid;
+  align-content: center;
+
+  /* horozontially center the alt text */
+  text-align: center;
+
+  /* overlap default alt text */
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* make lack of image distinctive */
+  background-color: #853d97;
+}
+code {
+  font: 16px Space Mono, monospace;
+}
+pre code {
+  font: 16px Space Mono, monospace;
+  overflow-x: auto;
+}
+footer {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}

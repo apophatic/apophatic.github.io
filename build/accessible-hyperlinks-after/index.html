@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name=robots content="noindex, noarchive">
+	<link rel="icon" href="data:,">
+	<title>accessible hyperlinks: :after</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+	<link href="https://rilkean.com/atom.xml" type="application/atom+xml" rel="alternate" title="Atom feed for log posts">
+</head>
+<nav>
+	<a href="/">index</a>–<a href="/atom.xml">rss</a>–<a href="/words">words</a>
+</nav>
+
+<main>
+<h1>accessible hyperlinks: :after</h1>
+<p>October 05, 2023</p>
+<p>A way to make hyperlinks accessible is by explictly informing the user when a hyperlink points externally. An option for this would be to use a north east arrow immediately after a hyperlink to denote it is <em>going outside</em>.</p>
+<p>Now, we don't want to have to copy and paste the HTML entity, HTML code, hex code, or even the UTF-8 character itself each time for an external hyperlink. Luckily, CSS has <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">attribute selectors</a>:</p>
+<blockquote><p>The CSS attribute selector matches elements based on the element having a given attribute explicitly set, with options for defining an attribute value or substring value match.</p>
+</blockquote>
+<p>This is to mean we can have anchor element, <code>&lt;a&gt;</code>, with an attribute, in our case <code>href</code>, matching a particular value, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors#attrvalue_6"><code>[attr*=value]</code></a>:</p>
+<blockquote><p>Represents elements with an attribute name of attr whose value contains at least one occurrence of value within the string.</p>
+</blockquote>
+<p>If we reflect a bit on what differentiates a local hyperlink versus an external hyperlink, we may come to the conclusion that external hyperlinks have two forward slashes in that <code>https://</code>. Where we are currently: <code>a[href*=&quot;//&quot;]</code>.</p>
+<p><strong>Note:</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#href"><code>href</code></a> is "not restricted to HTTP-based URLs — they can use any URL scheme supported by browsers", e.g., the common ones: <code>tel:</code>, <code>mailto:</code>, and <code>sms</code>. Therefore, we may also have something like <code>a[href*=&quot;mailto:&quot;]</code>.</p>
+<p>But otherwise, at this point, we want to create a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">pseudo-element</a>:</p>
+<blockquote><p>A CSS pseudo-element is a keyword added to a selector that lets you style a specific part of the selected element(s).</p>
+</blockquote>
+<p>What we are interested in our particular case is the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::after"><code>::after</code></a> psuedo-element:</p>
+<blockquote><p>In CSS, <code>::after</code> creates a pseudo-element that is the last child of the selected element. It is often used to add cosmetic content to an element with the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/content"><code>content</code></a> property. It is inline by default.</p>
+</blockquote>
+<p>If it is inline by default, does that mean our code won't require a <code>display: inline</code>? But as mentioned in the blockquote above, <code>::after</code> is "often used to add cosmetic content" indeed:</p>
+<blockquote><p>The <code>content</code> CSS property replaces content with a generated value. It can be used to define what is rendered inside an element or pseudo-element. For elements, the content property specifies whether the element renders normally (<code>normal</code> or <code>none</code>) or is replaced with an image (and associated "alt" text). For pseudo-elements and margin boxes, <code>content</code> defines the content as images, text, both, or none, which determines whether the element renders at all.</p>
+</blockquote>
+<p>The <a href="https://www.toptal.com/designers/htmlarrows/arrows/north-east-arrow/">CSS code for a north east arrow</a> is the <code>\2197</code>. And so:</p>
+<pre><code class="language-css">a[href*=&quot;//&quot;]::after {
+    font-size: 1.3em;
+    font-family: monospace;
+
+    /* north east arrow */
+    content: &quot;\2197&quot;;
+}
+``</code></pre>
+<footer>
+  <small>To be awake and to be alive are deeds, not states (Rilke).</small>
+</footer>

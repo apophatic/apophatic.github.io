@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>rilkean.com</title>
+	<link href="https://rilkean.com/atom.xml" rel="self" />
+	<updated>2023-11-07T01:16:38Z</updated>
+	<author>
+		<name>apophatic</name>
+	</author>
+	<id>https://rilkean.com,2023-11-07:default-atom-feed/</id>
+	<entry>
+		<title>the cost of modern webdev</title>
+		<content type="html">&lt;h1&gt;the cost of modern webdev&lt;/h1&gt;
+&lt;p&gt;October 17, 2023&lt;/p&gt;
+&lt;p&gt;I was un-installing unnecessary packages I had installed with &lt;code&gt;brew&lt;/code&gt; and realized there were far too many to account for. Instead of going through each package in &lt;code&gt;brew list&lt;/code&gt; and looking up the respective purpose, I decided to purge the entire formulae:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;brew remove --force $(brew list --formula)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Re-installing the necessary packages, I was not surprised to infer the large memory cost of modern web development, re: Node.js-based development:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;brew install node&lt;/code&gt; requires 58MB, not to mention its required dependencies which account for another ~242MB. Then there is &lt;code&gt;node_modules&lt;/code&gt; in an application, and all the &lt;code&gt;&amp;quot;dependencies&amp;quot;&lt;/code&gt; and &lt;code&gt;&amp;quot;devDependencies&amp;quot;&lt;/code&gt;, and their dependecies, ad infinitum. Regardless of the latter ending up in a &lt;code&gt;.gitignore&lt;/code&gt;, the memory requirements and complexity of modern web development is seemingly unnecessary.&lt;/p&gt;</content>
+		<link href="https://rilkean.com/the-cost-of-modern-webdev"/>
+		<id>https://rilkean.com/the-cost-of-modern-webdev</id>
+		<updated>October 17, 2023T10:00:00Z</updated>
+		<published>October 17, 2023T10:00:00Z</published>
+	</entry>
+	<entry>
+		<title>philos and sophia (a)</title>
+		<content type="html">&lt;h1&gt;philos and sophia (a)&lt;/h1&gt;
+&lt;p&gt;October 09, 2023&lt;/p&gt;
+&lt;p&gt;The beginning of a new series, going from A-to-Z, pointing to ten interesting philosophy(-deriving) links. Although, truth be told, it might be that laying them out here is better than keeping them bookmarked.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Henri_Bergson&quot;&gt;Henri Bergson&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Duration_(philosophy)&quot;&gt;Duration (Philosophy)&lt;/a&gt;
+&lt;blockquote&gt;&lt;p&gt;Duration is a theory of time and consciousness posited by the French philosopher Henri Bergson. Bergson sought to improve upon inadequacies he perceived in the philosophy of Herbert Spencer, due, he believed, to Spencer&#39;s lack of comprehension of mechanics, which led Bergson to the conclusion that time eluded mathematics and science. Bergson became aware that the moment one attempted to measure a moment, it would be gone: one measures an immobile, complete line, whereas time is mobile and incomplete. For the individual, time may speed up or slow down, whereas, for science, it would remain the same. Hence Bergson decided to explore the inner life of man, which is a kind of duration, neither a unity nor a quantitative multiplicity. Duration is ineffable and can only be shown indirectly through images that can never reveal a complete picture. It can only be grasped through a simple intuition of the imagination.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Carl_Gustav_Carus&quot;&gt;Carl Gustav Carus&lt;/a&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;Carl Gustav Carus (3 January 1789 – 28 July 1869) was a German physiologist and painter, born in Leipzig, who played various roles during the Romantic era. A friend of the writer Johann Wolfgang von Goethe, he was a many-sided man: a doctor, a naturalist, a scientist, a psychologist, and a landscape painter who studied under Caspar David Friedrich.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Ancient_Egyptian_conception_of_the_soul&quot;&gt;Ancient Egyptian conception of the soul&lt;/a&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;According to ancient Egyptian creation myths, the god Atum created the world out of chaos, utilizing his own magic. Because the earth was created with magic, Egyptians believed that the world was imbued with magic and so was every living thing upon it. When humans were created, that magic took the form of the soul, an eternal force which resided in and with every human. The concept of the soul and the parts which encompass it has varied from the Old Kingdom to the New Kingdom, at times changing from one dynasty to another, from five parts to more.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Doubting_Thomas&quot;&gt;Doubting Thomas&lt;/a&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;A doubting Thomas is a skeptic who refuses to believe without direct personal experience – a reference to the Gospel of John&#39;s depiction of the Apostle Thomas, who, in John&#39;s account, refused to believe the resurrected Jesus had appeared to the ten other apostles until he could see and feel Jesus&#39;s crucifixion wounds.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Eternal_statement&quot;&gt;Eternal statement&lt;/a&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;An eternal statement is a statement whose token instances all have the same truth value. For instance, every inscription or utterance of the sentence &quot;On July 15, 2009 it rains in Boston&quot; has the same truth value, no matter when or where it is asserted. This type of statement is distinguished from others in that its context will not influence its truth value. Essentially, an eternal statement is a true statement, regardless of how it used.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Cosmicism&quot;&gt;Cosmicism&lt;/a&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;Cosmicism is the literary philosophy developed and used by the American writer H. P. Lovecraft in his fiction. Lovecraft was a writer of philosophically intense horror stories that involve occult phenomena like astral possession and alien miscegenation, and the themes of his fiction over time contributed to the development of this philosophy.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Liberation_theology&quot;&gt;Liberation theology&lt;/a&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;Liberation theology is a Christian theological approach emphasizing the liberation of the oppressed. It engages in socio-economic analyses, with social concern for the poor and political liberation for oppressed peoples and addresses other forms of inequality, such as race or caste.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://plato.stanford.edu/entries/ontological-arguments/&quot;&gt;Ontological Arguments&lt;/a&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;Ontological arguments are arguments, for the conclusion that God exists, from premises which are supposed to derive from some source other than observation of the world—e.g., from reason alone. In other words, ontological arguments are arguments from what are typically alleged to be none but analytic, a priori and necessary premises to the conclusion that God exists.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://plato.stanford.edu/entries/empedocles/&quot;&gt;Empedocles&lt;/a&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;In the middle of the fifth century BCE, Empedocles of Acragas formulated a philosophical program in hexameter verse that pioneered the influential four-part theory of roots (air, water, earth, and fire) along with two active principles of Love and Strife, which influenced later philosophy, medicine, mysticism, cosmology, and religion. The philosophical system responded to Parmenides’ rejection of change while embracing religious injunctions and magical practices. As a result, Empedocles has occupied a significant position in the history of Presocratic philosophy as a figure moving between mythos and logos, religion and science.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://plato.stanford.edu/entries/process-philosophy/&quot;&gt;Process Philosophy&lt;/a&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;Process philosophy is based on the premise that being is dynamic and that the dynamic nature of being should be the primary focus of any comprehensive philosophical account of reality and our place within it. Even though we experience our world and ourselves as continuously changing, Western metaphysics has long been obsessed with describing reality as an assembly of static individuals whose dynamic features are either taken to be mere appearances or ontologically secondary and derivative. For process philosophers the adventure of philosophy begins with a set of problems that traditional metaphysics marginalizes or even sidesteps altogether: what is dynamicity or becoming—if it is the way we experience reality, how should we interpret this metaphysically? Are there several varieties of becoming—for instance, the uniform going on of activities versus the coming about of developments? Do all developments have the same way of occurring quite independently of what is coming about? How can we best classify into different kinds of occurrences? How can we understand the emergence of apparently novel conditions? Can we conceive of becoming or dynamic being independently of space and time?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content>
+		<link href="https://rilkean.com/philos-and-sophia-a"/>
+		<id>https://rilkean.com/philos-and-sophia-a</id>
+		<updated>October 09, 2023T10:00:00Z</updated>
+		<published>October 09, 2023T10:00:00Z</published>
+	</entry>
+	<entry>
+		<title>accessible images: :after</title>
+		<content type="html">&lt;h1&gt;accessible images: :after&lt;/h1&gt;
+&lt;p&gt;October 23, 2023&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This is an alternate form of the unnecessarily-unstyled-in a-critical-manner broken image logo and, if added, alternate text we typically see for offline images. This doesn&#39;t affect Safari-like browsers.&lt;/p&gt;
+&lt;p&gt;Styling the &lt;code&gt;img&lt;/code&gt; element to account for offline images–e.g., if (1) the image path is not found, (2) the image has been deleted, (3) the connection has been broken and the image did not load, (4) the webmaster is forbidding the image to load, and so on–is a great accessibility practice.&lt;/p&gt;
+&lt;p&gt;Like we thought for &lt;a href=&quot;/log/accessible-hyperlinks-after&quot;&gt;accessible externally-pointing hyperlinks&lt;/a&gt;, our thinking is similar here: what we are interested in is the &lt;em&gt;after-the-matter&lt;/em&gt;, i.e., &lt;code&gt;:after&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;But a pre-requisite for the following is to subscribe to the seemingly most pressing accessibility issue on the web: using the &lt;code&gt;img&lt;/code&gt; element&#39;s &lt;code&gt;alt&lt;/code&gt; property.&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;The &lt;code&gt;HTMLImageElement&lt;/code&gt; property &lt;code&gt;alt&lt;/code&gt; provides fallback (alternate) text to display when the image specified by the &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; element is not loaded.&lt;/p&gt;
+&lt;p&gt;...&lt;/p&gt;
+&lt;p&gt;Perhaps the most important reason to use the &lt;code&gt;alt&lt;/code&gt; property is to support accessibility, as the &lt;code&gt;alt&lt;/code&gt; text may be used by screen readers and other assistive technologies to help differently-abled users make full use of your content. It will be read aloud or sent to the touch device, for example, to support visually impaired users.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Now, the first on this log, something handy for our situation, a CSS function.&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;The &lt;code&gt;attr()&lt;/code&gt; CSS function is used to retrieve the value of an attribute of the selected element and use it in the stylesheet. It can also be used on pseudo-elements, in which case the value of the attribute on the pseudo-element&#39;s originating element is returned.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;You may now suddenly infer what we are doing. If a visitor to our website can&#39;t retrieve a particular image, we throw out the particular &lt;code&gt;alt&lt;/code&gt; text for the respective image to indicate what the image was. This is incredibly useful.&lt;/p&gt;
+&lt;p&gt;And so, the meat of our task is done:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;img:after {
+    content: attr(alt);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;But what we are doing further, and this is the critical part of our situation, is styling this in a critically-conscious manner compared to the default (see the note above).&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;img {
+    max-width: 100%;
+    min-height: 4em;
+    border: 2px dotted #ba55d3;
+
+    /* :after styling necessities */
+    display: block;
+    position: relative;
+}
+
+img:after {
+    font-size: 90%;
+
+    /* spit out the alt text */
+    content: attr(alt);
+
+    /* vertically center the alt text */
+    display: grid;
+    align-content: center;
+
+    /* horizontally center the alt text */
+    text-align: center;
+
+    /* overlap default alt text */
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /* make lack of image distinctive */
+    background-color: #410000;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The result for an image not found locally of the Milky Way Galaxy:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../public/images/milky-way-galaxy.jpg&quot; alt=&quot;Milky Way Galaxy&quot; title=&quot;Milky Way Galaxy&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;This is a lot better than the default.&lt;/p&gt;</content>
+		<link href="https://rilkean.com/accessible-images-after"/>
+		<id>https://rilkean.com/accessible-images-after</id>
+		<updated>October 23, 2023T10:00:00Z</updated>
+		<published>October 23, 2023T10:00:00Z</published>
+	</entry>
+	<entry>
+		<title>accessible hyperlinks: :after</title>
+		<content type="html">&lt;h1&gt;accessible hyperlinks: :after&lt;/h1&gt;
+&lt;p&gt;October 05, 2023&lt;/p&gt;
+&lt;p&gt;A way to make hyperlinks accessible is by explictly informing the user when a hyperlink points externally. An option for this would be to use a north east arrow immediately after a hyperlink to denote it is &lt;em&gt;going outside&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Now, we don&#39;t want to have to copy and paste the HTML entity, HTML code, hex code, or even the UTF-8 character itself each time for an external hyperlink. Luckily, CSS has &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors&quot;&gt;attribute selectors&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;The CSS attribute selector matches elements based on the element having a given attribute explicitly set, with options for defining an attribute value or substring value match.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is to mean we can have anchor element, &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;, with an attribute, in our case &lt;code&gt;href&lt;/code&gt;, matching a particular value, &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors#attrvalue_6&quot;&gt;&lt;code&gt;[attr*=value]&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;Represents elements with an attribute name of attr whose value contains at least one occurrence of value within the string.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If we reflect a bit on what differentiates a local hyperlink versus an external hyperlink, we may come to the conclusion that external hyperlinks have two forward slashes in that &lt;code&gt;https://&lt;/code&gt;. Where we are currently: &lt;code&gt;a[href*=&amp;quot;//&amp;quot;]&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#href&quot;&gt;&lt;code&gt;href&lt;/code&gt;&lt;/a&gt; is &quot;not restricted to HTTP-based URLs — they can use any URL scheme supported by browsers&quot;, e.g., the common ones: &lt;code&gt;tel:&lt;/code&gt;, &lt;code&gt;mailto:&lt;/code&gt;, and &lt;code&gt;sms&lt;/code&gt;. Therefore, we may also have something like &lt;code&gt;a[href*=&amp;quot;mailto:&amp;quot;]&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;But otherwise, at this point, we want to create a &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements&quot;&gt;pseudo-element&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;A CSS pseudo-element is a keyword added to a selector that lets you style a specific part of the selected element(s).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;What we are interested in our particular case is the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/::after&quot;&gt;&lt;code&gt;::after&lt;/code&gt;&lt;/a&gt; psuedo-element:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;In CSS, &lt;code&gt;::after&lt;/code&gt; creates a pseudo-element that is the last child of the selected element. It is often used to add cosmetic content to an element with the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/content&quot;&gt;&lt;code&gt;content&lt;/code&gt;&lt;/a&gt; property. It is inline by default.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If it is inline by default, does that mean our code won&#39;t require a &lt;code&gt;display: inline&lt;/code&gt;? But as mentioned in the blockquote above, &lt;code&gt;::after&lt;/code&gt; is &quot;often used to add cosmetic content&quot; indeed:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;The &lt;code&gt;content&lt;/code&gt; CSS property replaces content with a generated value. It can be used to define what is rendered inside an element or pseudo-element. For elements, the content property specifies whether the element renders normally (&lt;code&gt;normal&lt;/code&gt; or &lt;code&gt;none&lt;/code&gt;) or is replaced with an image (and associated &quot;alt&quot; text). For pseudo-elements and margin boxes, &lt;code&gt;content&lt;/code&gt; defines the content as images, text, both, or none, which determines whether the element renders at all.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The &lt;a href=&quot;https://www.toptal.com/designers/htmlarrows/arrows/north-east-arrow/&quot;&gt;CSS code for a north east arrow&lt;/a&gt; is the &lt;code&gt;\2197&lt;/code&gt;. And so:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;a[href*=&amp;quot;//&amp;quot;]::after {
+    font-size: 1.3em;
+    font-family: monospace;
+
+    /* north east arrow */
+    content: &amp;quot;\2197&amp;quot;;
+}
+``&lt;/code&gt;&lt;/pre&gt;</content>
+		<link href="https://rilkean.com/accessible-hyperlinks-after"/>
+		<id>https://rilkean.com/accessible-hyperlinks-after</id>
+		<updated>October 05, 2023T10:00:00Z</updated>
+		<published>October 05, 2023T10:00:00Z</published>
+	</entry>
+	<entry>
+		<title>accessible hyperlinks: :active</title>
+		<content type="html">&lt;h1&gt;accessible hyperlinks: :active&lt;/h1&gt;
+&lt;p&gt;October 21, 2023&lt;/p&gt;
+&lt;p&gt;To do accessibility on the web justice, it isn&#39;t enough having hyperlinks solely differentiated by the default link color, the default &lt;code&gt;text-decoration: underline&lt;/code&gt;, and the default, when hovering, &lt;code&gt;cursor: pointer&lt;/code&gt;. I have been indifferent and susceptible to not doing this for a long time but over the years, I&#39;ve noticed this on a fair share of websites and I thought it was accessibly neat.&lt;/p&gt;
+&lt;p&gt;What I&#39;m talking about is this behavior you typically see with form inputs: an outline when you focus-in on the input field. We may just as well fully adopt it for anchor elements.&lt;/p&gt;
+&lt;p&gt;What we&#39;ll need is the &lt;code&gt;:active&lt;/code&gt; pseudo-class:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;The &lt;code&gt;:active&lt;/code&gt; CSS pseudo-class represents an element (such as a button) that is being activated by the user. When using a mouse, &quot;activation&quot; typically starts when the user presses down the primary mouse button.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;And the &lt;code&gt;outline&lt;/code&gt; CSS property:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;Outline is a line outside of the element&#39;s border. Unlike other areas of the box, outlines don&#39;t take up space, so they don&#39;t affect the layout of the document in any way.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Therefore, the standard for hyperlinks around the web should have something like this (as used on this site):&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;a:active {
+    outline: 1px dotted #853d97;
+}
+&lt;/code&gt;&lt;/pre&gt;</content>
+		<link href="https://rilkean.com/accessible-hyperlinks-active"/>
+		<id>https://rilkean.com/accessible-hyperlinks-active</id>
+		<updated>October 21, 2023T10:00:00Z</updated>
+		<published>October 21, 2023T10:00:00Z</published>
+	</entry>
+</feed>
