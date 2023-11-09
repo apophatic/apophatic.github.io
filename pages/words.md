@@ -2,8 +2,6 @@
 
 A list of interesting words I come across, continually updated.
 
----
-
 - obfuscate
 - anamorphic
 - contritely

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<title>rilkean.com</title>
+	<title>brain dump</title>
 	<link href="https://rilkean.com/atom.xml" rel="self" />
-	<updated>2023-11-07T07:34:47Z</updated>
+	<updated>2023-11-08T20:48:00Z</updated>
 	<author>
 		<name>apophatic</name>
 	</author>
-	<id>https://rilkean.com,2023-11-07:default-atom-feed/</id>
+	<id>https://rilkean.com,2023-11-08:default-atom-feed/</id>
 	<entry>
 		<title>val town email rss notifications</title>
 		<content type="html">&lt;h1&gt;val town email rss notifications&lt;/h1&gt;
@@ -229,7 +229,7 @@ img:after {
     /* north east arrow */
     content: &amp;quot;\2197&amp;quot;;
 }
-``&lt;/code&gt;&lt;/pre&gt;</content>
+&lt;/code&gt;&lt;/pre&gt;</content>
 		<link href="https://rilkean.com/accessible-hyperlinks-after"/>
 		<id>https://rilkean.com/accessible-hyperlinks-after</id>
 		<updated>2023-10-05T10:00:00Z</updated>

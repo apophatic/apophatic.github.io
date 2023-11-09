@@ -38,4 +38,4 @@ a[href*="//"]::after {
     /* north east arrow */
     content: "\2197";
 }
-``
+```

@@ -1,5 +1,3 @@
-# rilkean.com
+# brain dump
 
-An informal, personal log about the web and literature.
-
-<hr>
+An informal, personal log pertaining to world wide web reverberations.
