@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>brain dump</title>
 	<link href="https://rilkean.com/atom.xml" rel="self" />
-	<updated>2023-11-08T20:48:00Z</updated>
+	<updated>2023-11-10T03:22:12Z</updated>
 	<author>
 		<name>apophatic</name>
 	</author>
-	<id>https://rilkean.com,2023-11-08:default-atom-feed/</id>
+	<id>https://rilkean.com,2023-11-10:default-atom-feed/</id>
 	<entry>
 		<title>val town email rss notifications</title>
 		<content type="html">&lt;h1&gt;val town email rss notifications&lt;/h1&gt;
@@ -74,14 +74,10 @@ export async function pollRSSFeeds({ lastRunAt }: Interval) {
 &lt;p&gt;2023-10-09&lt;/p&gt;
 &lt;p&gt;The beginning of a new series, going from A-to-Z, pointing to ten interesting philosophy(-deriving) links. Although, truth be told, it might be that laying them out here is better than keeping them bookmarked.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Henri_Bergson&quot;&gt;Henri Bergson&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Duration_(philosophy)&quot;&gt;Duration (Philosophy)&lt;/a&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Duration_(philosophy)&quot;&gt;Duration (Philosophy)&lt;/a&gt;
+&lt;/p&gt;
 &lt;blockquote&gt;&lt;p&gt;Duration is a theory of time and consciousness posited by the French philosopher Henri Bergson. Bergson sought to improve upon inadequacies he perceived in the philosophy of Herbert Spencer, due, he believed, to Spencer&#39;s lack of comprehension of mechanics, which led Bergson to the conclusion that time eluded mathematics and science. Bergson became aware that the moment one attempted to measure a moment, it would be gone: one measures an immobile, complete line, whereas time is mobile and incomplete. For the individual, time may speed up or slow down, whereas, for science, it would remain the same. Hence Bergson decided to explore the inner life of man, which is a kind of duration, neither a unity nor a quantitative multiplicity. Duration is ineffable and can only be shown indirectly through images that can never reveal a complete picture. It can only be grasped through a simple intuition of the imagination.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Carl_Gustav_Carus&quot;&gt;Carl Gustav Carus&lt;/a&gt;
 &lt;/p&gt;
