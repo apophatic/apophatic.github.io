@@ -18,7 +18,7 @@ A list of the tools I use in a somewhat regular occurence, directly or indirectl
 - **Terminal:** Terminal.app
   - **Shell:** Bash
   - **Package manager:** Homebrew
-  - **VSC:** Git
+  - **Version control system:** Git
 - **Password manager:** KeePassXC
 - **DNS nameserver:** NextDNS
 - **PDF viewer:** Preview.app

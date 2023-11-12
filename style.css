@@ -31,7 +31,7 @@
   font-style: normal;
 }
 :root {
-  --nc-font-sans: Gill Sans, sans-serif;
+  --nc-font-sans: tributeot, serif;
   --nc-font-serif: tributeot, serif;
   --nc-font-mono: Space Mono, monospace;
 
@@ -51,6 +51,8 @@
   /* Reset margins and padding */
   margin: 0;
   padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 address,
