@@ -31,7 +31,8 @@
   font-style: normal;
 }
 :root {
-  --nc-font-sans: tributeot, serif;
+  --nc-font-sans: Gill Sans, sans-serif;
+  --nc-font-serif: tributeot, serif;
   --nc-font-mono: Space Mono, monospace;
 
   --nc-tx-1: #ffcccc;
@@ -91,12 +92,6 @@ html,input,select,button {
   font-family: var(--nc-font-sans);
 }
 
-html {
-  background-image: url(./public/images/light.jpeg);
-  background-color: var(--nc-bg-1);
-  background-repeat: space repeat;
-}
-
 body {
   /* Center body in page */
   margin: 0 auto;
@@ -120,10 +115,11 @@ body {
   color: var(--nc-ac-tx);
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
   line-height: 1;
   color: var(--nc-tx-1);
   padding-top: .875rem;
+  font-family: var(--nc-font-serif);
 }
 
 h1,
@@ -322,7 +318,7 @@ pre {
 pre code {
   /* When <code> is in a <pre>, reset it's formatting to blend in */
   background: inherit;
-  font-size: 90%;
+  font-size: 94%;
   color: inherit;
   border: 0;
   padding: 0;
