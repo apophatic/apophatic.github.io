@@ -2,7 +2,7 @@
 
 A list of the tools I use in a somewhat regular occurence, directly or indirectly.
 
-### computer(-related) hardware
+### computer hardware
 - **Laptop:** 13-inch MacBook Pro (Mid-2014)
 - **Laptop stand:** Yohann MacBook Stand
 - **Keyboard:** HHKB Professional HYBRID Type-S
@@ -32,7 +32,6 @@ A list of the tools I use in a somewhat regular occurence, directly or indirectl
 - **Domain registrar:** iwantmyname
 - **Email service provider:** Migadu
 - **Email client:** Migadu Webmail
-- **Cloud storage:** Filen
 - **Code forge:** GitHub
 - **Document editor:** Typst
 - **Literary resources:** 
@@ -44,5 +43,4 @@ A list of the tools I use in a somewhat regular occurence, directly or indirectl
 |-------|--------------|
 |[iwantmyname](https://iwantmyname.com) (domain renewal)|$17|
 |[Migadu](https://webmail.gandi.net) (email service)|$19|
-|[Filen](https://mullvad.net) (cloud storage)|$12|
-|[**Friends of the SEP Society**](https://leibniz.stanford.edu/friends/) (SEP membership)|$10|
+|[Friends of the SEP Society](https://leibniz.stanford.edu/friends/) (SEP membership)|$05|
