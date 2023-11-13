@@ -36,7 +36,7 @@ A list of the tools I use in a somewhat regular occurence, directly or indirectl
 - **Document editor:** Typst
 - **Literary resources:** 
   - Anna's Archive
-  - Stanford Encylopedia of Philosophy (SEP)
+  - Stanford Encyclopedia of Philosophy (SEP)
 
 ### software subscriptions
 |service|cost/year|
