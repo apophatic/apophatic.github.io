@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name=robots content="noindex, noarchive">
+	<link rel="icon" href="data:,">
+	<title>from latex to typst</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+	<link href="https://rilkean.com/atom.xml" type="application/atom+xml" rel="alternate" title="Atom feed for log posts">
+</head>
+<header>
+	<nav>
+		<a href="/">index</a> | <a href="/atom.xml">rss</a> | <a href="/words">words</a> | <a href="/uses">uses</a>
+	</nav>
+</header>
+<main><h1>from latex to typst</h1>
+<p>2023-11-13</p>
+<p>For as long as I remember, I've been using LaTeX, the typesetting system, for updating my résumé. My editor of choice was, not the web-based editor <a href="https://www.overleaf.com/">Overleaf</a>, but rather, the University of Oregon's <a href="https://pages.uoregon.edu/koch/">Richard Koch's</a> <a href="https://pages.uoregon.edu/koch/texshop/">TeXShop</a>–initially released in 2000. </p>
+<p>It was always fun and interesting looking up solutions on the <a href="https://tex.stackexchange.com/">TeX Stack Exchange</a> for things I wanted to do but would quickly run into a wall trying to do. I mean, there is seemingly a high amount of material relating to TeX on the web that one is bound to find a solution to their problem quickly or eventually. And anyways, there is <a href="https://www.ctan.org/">CTAN</a>:</p>
+<blockquote><p>The Comprehensive TEX Archive Network (CTAN) is the central place for all kinds of material around TEX. CTAN has currently 6511 packages. 2955 contributors have contributed to it. Most of the packages are free and can be downloaded and used immediately.</p>
+</blockquote>
+<p>On the other hand, I came across <a href="https://typst.app">Typst</a>, a brand new typesetting system, a few months ago but it wasn't until a few nights that I played around with it. The Typst web-based editor and documentation were a breeze to work with. It might be that since I never had a web-based editor (e.g., Overleaf) workflow for working with LaTeX, I never realized the easy possibility of fledging out a fairly customized document quickly (i.e., without <em>building the document</em> as you do on TeXShop). </p>
+<p>But I think what I like most about Typst is its syntax. The below shows what creating a simple rule looks like, which one may easily decipher:</p>
+<pre><code class="language-typst">#show heading.where(
+  level: 2
+): it =&gt; {
+  smallcaps(it)
+}
+</code></pre>
+<p>LaTeX versus Typst almost feels like a battle between ancient and modern philosophers. Jokingly, shall we say: <em>The safest general characterization of the typesetting system tradition is that it consists of a series of footnotes to TeX?</em>  But for now, I'm going to be using Typst exclusively. Although, given how new it is, I wouldn't be surprised in significant shortcomings.</p>
+<footer>
+  <small>...like a bird caught by a limestick... (Hegel, <i>Phenomenology of Spirit</i>)</small>
+</footer>

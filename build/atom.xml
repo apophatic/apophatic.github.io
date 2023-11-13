@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<title>brain dump</title>
+	<title>rilkean.com</title>
 	<link href="https://rilkean.com/atom.xml" rel="self" />
-	<updated>2023-11-12T16:23:15Z</updated>
+	<updated>2023-11-13T09:38:03Z</updated>
 	<author>
 		<name>apophatic</name>
 	</author>
-	<id>https://rilkean.com,2023-11-12:default-atom-feed/</id>
+	<id>https://rilkean.com,2023-11-13:default-atom-feed/</id>
 	<entry>
 		<title>val town email rss notifications</title>
 		<content type="html">&lt;h1&gt;val town email rss notifications&lt;/h1&gt;
@@ -129,6 +129,28 @@ export async function pollRSSFeeds({ lastRunAt }: Interval) {
 		<id>https://rilkean.com/philos-and-sophia-a</id>
 		<updated>2023-10-09T10:00:00Z</updated>
 		<published>2023-10-09T10:00:00Z</published>
+	</entry>
+	<entry>
+		<title>from latex to typst</title>
+		<content type="html">&lt;h1&gt;from latex to typst&lt;/h1&gt;
+&lt;p&gt;2023-11-13&lt;/p&gt;
+&lt;p&gt;For as long as I remember, I&#39;ve been using LaTeX, the typesetting system, for updating my résumé. My editor of choice was, not the web-based editor &lt;a href=&quot;https://www.overleaf.com/&quot;&gt;Overleaf&lt;/a&gt;, but rather, the University of Oregon&#39;s &lt;a href=&quot;https://pages.uoregon.edu/koch/&quot;&gt;Richard Koch&#39;s&lt;/a&gt; &lt;a href=&quot;https://pages.uoregon.edu/koch/texshop/&quot;&gt;TeXShop&lt;/a&gt;–initially released in 2000. &lt;/p&gt;
+&lt;p&gt;It was always fun and interesting looking up solutions on the &lt;a href=&quot;https://tex.stackexchange.com/&quot;&gt;TeX Stack Exchange&lt;/a&gt; for things I wanted to do but would quickly run into a wall trying to do. I mean, there is seemingly a high amount of material relating to TeX on the web that one is bound to find a solution to their problem quickly or eventually. And anyways, there is &lt;a href=&quot;https://www.ctan.org/&quot;&gt;CTAN&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;The Comprehensive TEX Archive Network (CTAN) is the central place for all kinds of material around TEX. CTAN has currently 6511 packages. 2955 contributors have contributed to it. Most of the packages are free and can be downloaded and used immediately.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;On the other hand, I came across &lt;a href=&quot;https://typst.app&quot;&gt;Typst&lt;/a&gt;, a brand new typesetting system, a few months ago but it wasn&#39;t until a few nights that I played around with it. The Typst web-based editor and documentation were a breeze to work with. It might be that since I never had a web-based editor (e.g., Overleaf) workflow for working with LaTeX, I never realized the easy possibility of fledging out a fairly customized document quickly (i.e., without &lt;em&gt;building the document&lt;/em&gt; as you do on TeXShop). &lt;/p&gt;
+&lt;p&gt;But I think what I like most about Typst is its syntax. The below shows what creating a simple rule looks like, which one may easily decipher:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-typst&quot;&gt;#show heading.where(
+  level: 2
+): it =&amp;gt; {
+  smallcaps(it)
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;LaTeX versus Typst almost feels like a battle between ancient and modern philosophers. Jokingly, shall we say: &lt;em&gt;The safest general characterization of the typesetting system tradition is that it consists of a series of footnotes to TeX?&lt;/em&gt;  But for now, I&#39;m going to be using Typst exclusively. Although, given how new it is, I wouldn&#39;t be surprised in significant shortcomings.&lt;/p&gt;</content>
+		<link href="https://rilkean.com/from-latex-to-typst"/>
+		<id>https://rilkean.com/from-latex-to-typst</id>
+		<updated>2023-11-13T10:00:00Z</updated>
+		<published>2023-11-13T10:00:00Z</published>
 	</entry>
 	<entry>
 		<title>accessible images: :after</title>

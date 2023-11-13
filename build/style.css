@@ -30,10 +30,18 @@
   font-weight: Bold;
   font-style: normal;
 }
+@font-face {
+  font-family: Dosis;
+  src: url(./public/font/Dosis/Dosis-VariableFont_wght.ttf) format(truetype);
+}
+@font-face {
+  font-family: Sono;
+  src: url(./public/font/Sono/Sono-VariableFont_MONO,wght.ttf) format(truetype);
+}
 :root {
-  --nc-font-sans: tributeot, serif;
-  --nc-font-serif: tributeot, serif;
-  --nc-font-mono: Space Mono, monospace;
+  --nc-font-sans: Dosis, sans-serif;
+  --nc-font-serif: Dosis, sans-serif;
+  --nc-font-mono: Sono, monospace;
 
   --nc-tx-1: #ffcccc;
   --nc-tx-2: #ffcccc;
@@ -51,8 +59,6 @@
   /* Reset margins and padding */
   margin: 0;
   padding: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 address,
@@ -109,6 +115,7 @@ body {
   color: var(--nc-tx-2);
   font-size: 1.13rem;
   line-height: 1.5;
+  letter-spacing: 0.8px;
 }
 
 ::selection {
@@ -130,7 +137,6 @@ h3 {
   color: var(--nc-tx-1);
   padding-bottom: 2px;
   margin-bottom: 8px;
-  font-weight: normal;
 }
 
 h4,
@@ -291,6 +297,7 @@ kbd,
 samp {
   /* Set the font family for monospaced elements */
   font-family: var(--nc-font-mono);
+  letter-spacing: 0;
 }
 
 code,
