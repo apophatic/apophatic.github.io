@@ -2,6 +2,8 @@
 
 A list of interesting words I come across, continually updated.
 
+---
+
 - obfuscate
 - anamorphic
 - contritely
@@ -160,3 +162,5 @@ A list of interesting words I come across, continually updated.
 - ignominy
 - daedal
 - pistil
+- systole
+- diastole

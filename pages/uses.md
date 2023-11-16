@@ -2,6 +2,8 @@
 
 A list of the tools I use in a somewhat regular occurence, directly or indirectly.
 
+---
+
 ### computer hardware
 - **Laptop:** 13-inch MacBook Pro (Mid-2014)
 - **Laptop stand:** Yohann MacBook Stand

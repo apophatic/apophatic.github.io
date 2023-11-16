@@ -1,36 +1,4 @@
 @font-face {
-  font-family: tributeot;
-  src: url(./public/font/tributeot-roman-webfont.woff2) format(woff2),
-         url(./public/font/tributeot-roman-webfont.woff) format(woff);
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: tributeot;
-  src: url(./public/font/tributeot-italic-webfont.woff2) format(woff2),
-         url(./public/font/tributeot-italic-webfont.woff) format(woff);
-  font-weight: normal;
-  font-style: italic;
-}
-@font-face {
-  font-family: Space Mono;
-  src: url(./public/font/SpaceMono-Regular.ttf) format(truetype);
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: Space Mono;
-  src: url(./public/font/SpaceMono-Italic.ttf) format(truetype);
-  font-weight: normal;
-  font-style: italic;
-}
-@font-face {
-  font-family: Space Mono;
-  src: url(./public/font/SpaceMono-Bold.ttf) format(truetype);
-  font-weight: Bold;
-  font-style: normal;
-}
-@font-face {
   font-family: Dosis;
   src: url(./public/font/Dosis/Dosis-VariableFont_wght.ttf) format(truetype);
 }
