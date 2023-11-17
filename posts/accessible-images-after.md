@@ -6,7 +6,7 @@
 
 Styling the `img` element to account for offline images–e.g., if (1) the image path is not found, (2) the image has been deleted, (3) the connection has been broken and the image did not load, (4) the webmaster is forbidding the image to load, and so on–is a great accessibility practice.
 
-Like we thought for [accessible externally-pointing hyperlinks](/log/accessible-hyperlinks-after), our thinking is similar here: what we are interested in is the *after-the-matter*, i.e., `:after`.
+Like we thought for [accessible externally-pointing hyperlinks](/accessible-hyperlinks-after), our thinking is similar here: what we are interested in is the *after-the-matter*, i.e., `:after`.
 
 But a pre-requisite for the following is to subscribe to the seemingly most pressing accessibility issue on the web: using the `img` element's `alt` property.
 

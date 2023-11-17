@@ -44,5 +44,5 @@ A list of the tools I use in a somewhat regular occurence, directly or indirectl
 |service|cost/year|
 |-------|--------------|
 |[iwantmyname](https://iwantmyname.com) (domain renewal)|$17|
-|[Migadu](https://webmail.gandi.net) (email service)|$19|
-|[Friends of the SEP Society](https://leibniz.stanford.edu/friends/) (SEP membership)|$05|
+|[Migadu](https://webmail.migadu.com) (email service)|$19|
+|[Friends of the SEP Society](https://leibniz.stanford.edu/friends/) (SEP PDFs)|$5|
