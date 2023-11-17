@@ -10,7 +10,7 @@ There is a new page on this site, [the library page](/library), which is a readi
 	<book category="theology">
 		<title>God In Our Hands</title>
 		<author>Graham Shaw</author>
-		<publisher>UNKNO</publisher>
+		<publisher>SCM Press</publisher>
 		<year>1987</year>
 		<read>Fall 2023</read>
 	</book>

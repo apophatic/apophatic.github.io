@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>rilkean.com</title>
 	<link href="https://rilkean.com/atom.xml" rel="self" />
-	<updated>2023-11-16T16:22:31Z</updated>
+	<updated>2023-11-16T16:44:42Z</updated>
 	<author>
 		<name>apophatic</name>
 	</author>
@@ -17,7 +17,7 @@
 	&amp;lt;book category=&amp;quot;theology&amp;quot;&amp;gt;
 		&amp;lt;title&amp;gt;God In Our Hands&amp;lt;/title&amp;gt;
 		&amp;lt;author&amp;gt;Graham Shaw&amp;lt;/author&amp;gt;
-		&amp;lt;publisher&amp;gt;UNKNO&amp;lt;/publisher&amp;gt;
+		&amp;lt;publisher&amp;gt;SCM Press&amp;lt;/publisher&amp;gt;
 		&amp;lt;year&amp;gt;1987&amp;lt;/year&amp;gt;
 		&amp;lt;read&amp;gt;Fall 2023&amp;lt;/read&amp;gt;
 	&amp;lt;/book&amp;gt;
@@ -225,7 +225,7 @@ export async function pollRSSFeeds({ lastRunAt }: Interval) {
 &lt;p&gt;2023-10-23&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; This is an alternate form of the unnecessarily-unstyled-in a-critical-manner broken image logo and, if added, alternate text we typically see for offline images. This doesn&#39;t affect Safari-like browsers.&lt;/p&gt;
 &lt;p&gt;Styling the &lt;code&gt;img&lt;/code&gt; element to account for offline images–e.g., if (1) the image path is not found, (2) the image has been deleted, (3) the connection has been broken and the image did not load, (4) the webmaster is forbidding the image to load, and so on–is a great accessibility practice.&lt;/p&gt;
-&lt;p&gt;Like we thought for &lt;a href=&quot;/log/accessible-hyperlinks-after&quot;&gt;accessible externally-pointing hyperlinks&lt;/a&gt;, our thinking is similar here: what we are interested in is the &lt;em&gt;after-the-matter&lt;/em&gt;, i.e., &lt;code&gt;:after&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Like we thought for &lt;a href=&quot;/accessible-hyperlinks-after&quot;&gt;accessible externally-pointing hyperlinks&lt;/a&gt;, our thinking is similar here: what we are interested in is the &lt;em&gt;after-the-matter&lt;/em&gt;, i.e., &lt;code&gt;:after&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;But a pre-requisite for the following is to subscribe to the seemingly most pressing accessibility issue on the web: using the &lt;code&gt;img&lt;/code&gt; element&#39;s &lt;code&gt;alt&lt;/code&gt; property.&lt;/p&gt;
 &lt;blockquote&gt;&lt;p&gt;The &lt;code&gt;HTMLImageElement&lt;/code&gt; property &lt;code&gt;alt&lt;/code&gt; provides fallback (alternate) text to display when the image specified by the &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; element is not loaded.&lt;/p&gt;
 &lt;p&gt;...&lt;/p&gt;
