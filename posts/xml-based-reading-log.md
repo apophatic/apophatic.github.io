@@ -1,8 +1,8 @@
-# xml-based reading log
+# xml-based library
 
 2023-11-16
 
-There is a new page on this site, [the library page](/library), which is a reading log in a table format. The source of the library page is an XML document, albeit, a fairly simple one at the moment:
+There is a new page on this site, [the library page](/library), which is a list of some of my favorite creative works in a table format. The source of the library page is an XML document, albeit, a fairly simple one at the moment:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -16,7 +16,7 @@ There is a new page on this site, [the library page](/library), which is a readi
 	</book>
 </library>
 ```
-Commonly, I convert the XML to XSLT:
+As usual, convert the XML to XSLT:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
@@ -27,26 +27,27 @@ Commonly, I convert the XML to XSLT:
 	</head>
 	<body>
 		<h1>library</h1>
-		<p>A reading log.</p>
+		<p>A list of some of my favorite creative works.
+		</p>
 		<hr/>
-		    <table>
-      			<tr>
-        			<th>title</th>
-        			<th>author</th>
-        			<th>publisher</th>
-        			<th>year</th>
-        			<th>read</th>
-      			</tr>
-      			<xsl:for-each select="library/book">
-      			<tr>
-        			<td><xsl:value-of select="title"/></td>
-        			<td><xsl:value-of select="author"/></td>
-        			<td><xsl:value-of select="publisher"/></td>
-        			<td><xsl:value-of select="year"/></td>
-        			<td><xsl:value-of select="read"/></td>
-      			</tr>
-      			</xsl:for-each>
-    		</table>
+		<table>
+      		<tr>
+        		<th>title</th>
+    			<th>author</th>
+    			<th>publisher</th>
+    			<th>year</th>
+    			<th>read</th>
+      		</tr>
+      		<xsl:for-each select="library/book">
+      		<tr>
+    			<td><xsl:value-of select="title"/></td>
+    			<td><xsl:value-of select="author"/></td>
+    			<td><xsl:value-of select="publisher"/></td>
+    			<td><xsl:value-of select="year"/></td>
+    			<td><xsl:value-of select="read"/></td>
+      		</tr>
+      		</xsl:for-each>
+   		</table>
 	</body>
 	</html>
 </xsl:template>
@@ -55,7 +56,7 @@ Commonly, I convert the XML to XSLT:
 
 Considering the structure of my website, the above two files, `library.xml` and `library.xslt` are standalone at the root of the website given they are unnecessary to the production of the website, i.e., they are not part of the makefile. This is logical: none of those files outputs to something web-friendly to display.
 
-And therefore, a handy library already pre-installed in Linux and Unix-like operating systems: [xsltproc](https://opensource.apple.com/source/libxslt/libxslt-5/libxslt/doc/xsltproc.html), a command line xslt processor.
+And therefore, a handy library already pre-installed in Unix-like operating systems: [xsltproc](https://opensource.apple.com/source/libxslt/libxslt-5/libxslt/doc/xsltproc.html), a command line xslt processor.
 
 > xsltproc is a command line tool for applying XSLT stylesheets to XML documents. It is part of libxslt, the XSLT C library for GNOME. While it was developed as part of the GNOME project, it can operate independently of the GNOME desktop. 
 >
@@ -74,4 +75,4 @@ At the root of my website:
 xsltproc -o ./pages/library.md  library.xslt library.xml
 ```
 
-This applies the XSLT file to the XML file and through XSLT converts it to HTML. The output file is placed right in my pages folder where it gets rendered not only as a proper document but also according to my already defined stylesheet. I leave the output file untouched.
+This applies the XSLT file to the XML file and through XSLT converts it to HTML. The output file is placed right in my pages folder where it gets rendered not only as a proper document but also according to my already defined stylesheet. I leave the output file, the HTML document, untouched.

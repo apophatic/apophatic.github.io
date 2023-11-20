@@ -5,29 +5,47 @@
 </head>
 <body>
 <h1>library</h1>
-<p>A reading log.</p>
+<p>A list of some of my favorite creative works.</p>
 <hr>
+<h3>books</h3>
 <table>
 <tr>
 <th>title</th>
 <th>author</th>
-<th>publisher</th>
 <th>year</th>
-<th>read</th>
+</tr>
+<tr>
+<td>Rilke's Book of Hours: Love Poems to God</td>
+<td>Rainer Maria Rilke</td>
+<td>1905</td>
 </tr>
 <tr>
 <td>Voices</td>
 <td>Antonio Porchia</td>
-<td>Big Table Publishing</td>
 <td>1969</td>
-<td>Fall 2023</td>
 </tr>
 <tr>
 <td>God In Our Hands</td>
 <td>Graham Shaw</td>
-<td>SCM Press</td>
 <td>1987</td>
-<td>Fall 2023</td>
+</tr>
+</table>
+<h3>films</h3>
+<table>
+<tr>
+<th>title</th>
+<th>director</th>
+<th>year</th>
+</tr>
+<tr>
+<td>Institute Benjamenta, or This Dream People Call Human Life</td>
+<td>Brothers Quay</td>
+<td>1995</td>
+</tr>
+<tr>
+<td>Ordet</td>
+<td>Carl Theodor Dreyer</td>
+<td>1955</td>
 </tr>
 </table>
 </body>

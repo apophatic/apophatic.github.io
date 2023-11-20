@@ -164,3 +164,5 @@ A list of interesting words I come across, continually updated.
 - pistil
 - systole
 - diastole
+- pontine
+- ineluctable

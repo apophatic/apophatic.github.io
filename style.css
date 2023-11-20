@@ -6,9 +6,14 @@
   font-family: Sono;
   src: url(./public/font/Sono/Sono-VariableFont_MONO,wght.ttf) format(truetype);
 }
+@font-face {
+  font-family: Bellefair;
+  src: url(./public/font/bellefair/webfonts/bellefair-latin-400-normal.woff2) format(woff2),
+    url(./public/font/bellefair/webfonts/bellefair-latin-400-normal.woff) format(woff);
+}
 :root {
   --nc-font-sans: Dosis, sans-serif;
-  --nc-font-serif: Dosis, sans-serif;
+  --nc-font-serif: Bellefair, serif;
   --nc-font-mono: Sono, monospace;
 
   --nc-tx-1: #ffcccc;
@@ -95,8 +100,10 @@ body {
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
   color: var(--nc-tx-1);
-  padding-top: .875rem;
+  /*padding-top: .875rem;*/
   font-family: var(--nc-font-serif);
+  font-weight: normal;
+  letter-spacing: normal;
 }
 
 h1,
@@ -182,8 +189,8 @@ blockquote *:last-child {
 
 header {
   background: var(--nc-bg-2);
-  border-bottom: 2px solid var(--nc-bg-3);
-  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--nc-bg-3);
+  padding: 0.8rem 1.5rem;
   
   /* This sets the right and left margins to cancel out the body's margins. It's width is still the same, but the background stretches across the page's width. */
 
@@ -479,7 +486,14 @@ img::after {
 }
 
 footer {
-  margin-top: 4rem;
+  background: var(--nc-bg-2);
+  border-top: 1px solid var(--nc-bg-3);
+  padding: 0.4rem 1.5rem;
+
   display: flex;
   justify-content: center;
+
+  margin: 4rem calc(50% - 50vw) -2rem;
+  padding-left: calc(50vw - 50%);
+  padding-right: calc(50vw - 50%);
 }

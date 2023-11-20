@@ -8,23 +8,35 @@
 	</head>
 	<body>
 		<h1>library</h1>
-		<p>A reading log.</p>
+		<p>A list of some of my favorite creative works.</p>
 		<hr/>
-		    <table>
+		<h3>books</h3>
+			<table>
       			<tr>
         			<th>title</th>
         			<th>author</th>
-        			<th>publisher</th>
         			<th>year</th>
-        			<th>read</th>
       			</tr>
       			<xsl:for-each select="library/book">
       			<tr>
         			<td><xsl:value-of select="title"/></td>
         			<td><xsl:value-of select="author"/></td>
-        			<td><xsl:value-of select="publisher"/></td>
         			<td><xsl:value-of select="year"/></td>
-        			<td><xsl:value-of select="read"/></td>
+      			</tr>
+      			</xsl:for-each>
+    		</table>
+    	<h3>films</h3>
+			<table>
+      			<tr>
+        			<th>title</th>
+        			<th>director</th>
+        			<th>year</th>
+      			</tr>
+      			<xsl:for-each select="library/film">
+      			<tr>
+        			<td><xsl:value-of select="title"/></td>
+        			<td><xsl:value-of select="director"/></td>
+        			<td><xsl:value-of select="year"/></td>
       			</tr>
       			</xsl:for-each>
     		</table>

@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <library>
+	<film category="drama">
+		<title>Institute Benjamenta, or This Dream People Call Human Life</title>
+		<director>Brothers Quay</director>
+		<year>1995</year>
+	</film>
+	<film category="drama">
+		<title>Ordet</title>
+		<director>Carl Theodor Dreyer</director>
+		<year>1955</year>
+	</film>
+	<book category="poetry">
+		<title>Rilke's Book of Hours: Love Poems to God</title>
+		<author>Rainer Maria Rilke</author>
+		<year>1905</year>
+	</book>
 	<book category="philosophy">
 		<title>Voices</title>
 		<author>Antonio Porchia</author>
-		<publisher>Big Table Publishing</publisher>
-		<year>1969</year>
-		<read>Fall 2023</read>
+		<year>1943</year>
 	</book>
 	<book category="theology">
 		<title>God In Our Hands</title>
 		<author>Graham Shaw</author>
-		<publisher>SCM Press</publisher>
 		<year>1987</year>
-		<read>Fall 2023</read>
 	</book>
 </library>

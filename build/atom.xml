@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<title>rilkean.com</title>
+	<title>brain dump</title>
 	<link href="https://rilkean.com/atom.xml" rel="self" />
-	<updated>2023-11-18T10:49:06Z</updated>
+	<updated>2023-11-20T09:47:23Z</updated>
 	<author>
 		<name>apophatic</name>
 	</author>
-	<id>https://rilkean.com,2023-11-18:default-atom-feed/</id>
+	<id>https://rilkean.com,2023-11-20:default-atom-feed/</id>
 	<entry>
-		<title>xml-based reading log</title>
-		<content type="html">&lt;h1&gt;xml-based reading log&lt;/h1&gt;
+		<title>xml-based library</title>
+		<content type="html">&lt;h1&gt;xml-based library&lt;/h1&gt;
 &lt;p&gt;2023-11-16&lt;/p&gt;
-&lt;p&gt;There is a new page on this site, &lt;a href=&quot;/library&quot;&gt;the library page&lt;/a&gt;, which is a reading log in a table format. The source of the library page is an XML document, albeit, a fairly simple one at the moment:&lt;/p&gt;
+&lt;p&gt;There is a new page on this site, &lt;a href=&quot;/library&quot;&gt;the library page&lt;/a&gt;, which is a list of some of my favorite creative works in a table format. The source of the library page is an XML document, albeit, a fairly simple one at the moment:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-xml&quot;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
 &amp;lt;library&amp;gt;
 	&amp;lt;book category=&amp;quot;theology&amp;quot;&amp;gt;
@@ -23,7 +23,7 @@
 	&amp;lt;/book&amp;gt;
 &amp;lt;/library&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Commonly, I convert the XML to XSLT:&lt;/p&gt;
+&lt;p&gt;As usual, convert the XML to XSLT:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-xml&quot;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
 &amp;lt;xsl:stylesheet version=&amp;quot;1.0&amp;quot; xmlns:xsl=&amp;quot;http://www.w3.org/1999/XSL/Transform&amp;quot;&amp;gt;
 &amp;lt;xsl:template match=&amp;quot;/&amp;quot;&amp;gt;
@@ -33,33 +33,34 @@
 	&amp;lt;/head&amp;gt;
 	&amp;lt;body&amp;gt;
 		&amp;lt;h1&amp;gt;library&amp;lt;/h1&amp;gt;
-		&amp;lt;p&amp;gt;A reading log.&amp;lt;/p&amp;gt;
+		&amp;lt;p&amp;gt;A list of some of my favorite creative works.
+		&amp;lt;/p&amp;gt;
 		&amp;lt;hr/&amp;gt;
-		    &amp;lt;table&amp;gt;
-      			&amp;lt;tr&amp;gt;
-        			&amp;lt;th&amp;gt;title&amp;lt;/th&amp;gt;
-        			&amp;lt;th&amp;gt;author&amp;lt;/th&amp;gt;
-        			&amp;lt;th&amp;gt;publisher&amp;lt;/th&amp;gt;
-        			&amp;lt;th&amp;gt;year&amp;lt;/th&amp;gt;
-        			&amp;lt;th&amp;gt;read&amp;lt;/th&amp;gt;
-      			&amp;lt;/tr&amp;gt;
-      			&amp;lt;xsl:for-each select=&amp;quot;library/book&amp;quot;&amp;gt;
-      			&amp;lt;tr&amp;gt;
-        			&amp;lt;td&amp;gt;&amp;lt;xsl:value-of select=&amp;quot;title&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
-        			&amp;lt;td&amp;gt;&amp;lt;xsl:value-of select=&amp;quot;author&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
-        			&amp;lt;td&amp;gt;&amp;lt;xsl:value-of select=&amp;quot;publisher&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
-        			&amp;lt;td&amp;gt;&amp;lt;xsl:value-of select=&amp;quot;year&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
-        			&amp;lt;td&amp;gt;&amp;lt;xsl:value-of select=&amp;quot;read&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
-      			&amp;lt;/tr&amp;gt;
-      			&amp;lt;/xsl:for-each&amp;gt;
-    		&amp;lt;/table&amp;gt;
+		&amp;lt;table&amp;gt;
+      		&amp;lt;tr&amp;gt;
+        		&amp;lt;th&amp;gt;title&amp;lt;/th&amp;gt;
+    			&amp;lt;th&amp;gt;author&amp;lt;/th&amp;gt;
+    			&amp;lt;th&amp;gt;publisher&amp;lt;/th&amp;gt;
+    			&amp;lt;th&amp;gt;year&amp;lt;/th&amp;gt;
+    			&amp;lt;th&amp;gt;read&amp;lt;/th&amp;gt;
+      		&amp;lt;/tr&amp;gt;
+      		&amp;lt;xsl:for-each select=&amp;quot;library/book&amp;quot;&amp;gt;
+      		&amp;lt;tr&amp;gt;
+    			&amp;lt;td&amp;gt;&amp;lt;xsl:value-of select=&amp;quot;title&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
+    			&amp;lt;td&amp;gt;&amp;lt;xsl:value-of select=&amp;quot;author&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
+    			&amp;lt;td&amp;gt;&amp;lt;xsl:value-of select=&amp;quot;publisher&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
+    			&amp;lt;td&amp;gt;&amp;lt;xsl:value-of select=&amp;quot;year&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
+    			&amp;lt;td&amp;gt;&amp;lt;xsl:value-of select=&amp;quot;read&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
+      		&amp;lt;/tr&amp;gt;
+      		&amp;lt;/xsl:for-each&amp;gt;
+   		&amp;lt;/table&amp;gt;
 	&amp;lt;/body&amp;gt;
 	&amp;lt;/html&amp;gt;
 &amp;lt;/xsl:template&amp;gt;
 &amp;lt;/xsl:stylesheet&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Considering the structure of my website, the above two files, &lt;code&gt;library.xml&lt;/code&gt; and &lt;code&gt;library.xslt&lt;/code&gt; are standalone at the root of the website given they are unnecessary to the production of the website, i.e., they are not part of the makefile. This is logical: none of those files outputs to something web-friendly to display.&lt;/p&gt;
-&lt;p&gt;And therefore, a handy library already pre-installed in Linux and Unix-like operating systems: &lt;a href=&quot;https://opensource.apple.com/source/libxslt/libxslt-5/libxslt/doc/xsltproc.html&quot;&gt;xsltproc&lt;/a&gt;, a command line xslt processor.&lt;/p&gt;
+&lt;p&gt;And therefore, a handy library already pre-installed in Unix-like operating systems: &lt;a href=&quot;https://opensource.apple.com/source/libxslt/libxslt-5/libxslt/doc/xsltproc.html&quot;&gt;xsltproc&lt;/a&gt;, a command line xslt processor.&lt;/p&gt;
 &lt;blockquote&gt;&lt;p&gt;xsltproc is a command line tool for applying XSLT stylesheets to XML documents. It is part of libxslt, the XSLT C library for GNOME. While it was developed as part of the GNOME project, it can operate independently of the GNOME desktop. &lt;/p&gt;
 &lt;p&gt;xsltproc is invoked from the command line with the name of the stylesheet to be used followed by the name of the file or files to which the stylesheet is to be applied.&lt;/p&gt;
 &lt;p&gt;If a stylesheet is included in an XML document with a Stylesheet Processing Instruction, no stylesheet need be named at the command line. xsltproc will automatically detect the included stylesheet and use it.&lt;/p&gt;
@@ -68,7 +69,7 @@
 &lt;p&gt;At the root of my website:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;xsltproc -o ./pages/library.md  library.xslt library.xml
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This applies the XSLT file to the XML file and through XSLT converts it to HTML. The output file is placed right in my pages folder where it gets rendered not only as a proper document but also according to my already defined stylesheet. I leave the output file untouched.&lt;/p&gt;</content>
+&lt;p&gt;This applies the XSLT file to the XML file and through XSLT converts it to HTML. The output file is placed right in my pages folder where it gets rendered not only as a proper document but also according to my already defined stylesheet. I leave the output file, the HTML document, untouched.&lt;/p&gt;</content>
 		<link href="https://rilkean.com/xml-based-reading-log"/>
 		<id>https://rilkean.com/xml-based-reading-log</id>
 		<updated>2023-11-16T10:00:00Z</updated>
