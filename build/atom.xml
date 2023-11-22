@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>brain dump</title>
 	<link href="https://rilkean.com/atom.xml" rel="self" />
-	<updated>2023-11-20T09:47:23Z</updated>
+	<updated>2023-11-21T16:25:31Z</updated>
 	<author>
 		<name>apophatic</name>
 	</author>
-	<id>https://rilkean.com,2023-11-20:default-atom-feed/</id>
+	<id>https://rilkean.com,2023-11-21:default-atom-feed/</id>
 	<entry>
 		<title>xml-based library</title>
 		<content type="html">&lt;h1&gt;xml-based library&lt;/h1&gt;
