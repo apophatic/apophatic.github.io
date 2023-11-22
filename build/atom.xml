@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<title>brain dump</title>
+	<title>index</title>
 	<link href="https://rilkean.com/atom.xml" rel="self" />
-	<updated>2023-11-21T16:25:31Z</updated>
+	<updated>2023-11-21T17:49:54Z</updated>
 	<author>
 		<name>apophatic</name>
 	</author>

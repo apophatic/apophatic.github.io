@@ -327,7 +327,7 @@ pre {
   background: var(--nc-bg-2);
   border: 1px solid var(--nc-bg-3);
   border-radius: 4px;
-  padding: 0 6px;
+  padding: 3px 6px;
   /* ↓ font-size is relative to containing element, so it scales for titles*/
   font-size: 82.5%;
 }
@@ -346,7 +346,7 @@ pre {
 pre code {
   /* When <code> is in a <pre>, reset it's formatting to blend in */
   background: inherit;
-  font-size: 94%;
+  font-size: 100%;
   color: inherit;
   border: 0;
   padding: 0;
@@ -523,14 +523,7 @@ img::after {
 }
 
 footer {
-  background: var(--nc-bg-2);
-  border-top: 1px solid var(--nc-bg-3);
-  padding: 0.4rem 1.5rem;
-
   display: flex;
   justify-content: center;
-
-  margin: 4rem calc(50% - 50vw) -2rem;
-  padding-left: calc(50vw - 50%);
-  padding-right: calc(50vw - 50%);
+  margin-top: 3rem;
 }

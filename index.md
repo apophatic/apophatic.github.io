@@ -1,4 +1,4 @@
-# brain dump
+# index
 
 Informal world wide web reverberations.
 
