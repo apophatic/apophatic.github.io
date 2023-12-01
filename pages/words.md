@@ -166,3 +166,7 @@ A list of interesting words I come across, continually updated.
 - diastole
 - pontine
 - ineluctable
+- epigone
+- seance
+- neurasthenia
+- ecumenical

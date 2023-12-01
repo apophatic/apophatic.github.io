@@ -3,7 +3,6 @@ build:
 	rsync -r public/ build/public
 	rsync style.css build/style.css
 	rsync 404.html build/404.html
-	rsync CNAME build/CNAME
 
 clean:
 	rm -rf build/*

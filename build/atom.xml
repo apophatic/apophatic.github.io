@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>index</title>
-	<link href="https://rilkean.com/atom.xml" rel="self" />
-	<updated>2023-11-21T17:49:54Z</updated>
+	<link href="https://apophatic.github.io/atom.xml" rel="self" />
+	<updated>2023-12-01T15:28:47Z</updated>
 	<author>
 		<name>apophatic</name>
 	</author>
-	<id>https://rilkean.com,2023-11-21:default-atom-feed/</id>
+	<id>https://apophatic.github.io,2023-12-01:default-atom-feed/</id>
 	<entry>
 		<title>xml-based library</title>
 		<content type="html">&lt;h1&gt;xml-based library&lt;/h1&gt;
@@ -70,8 +70,8 @@
 &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;xsltproc -o ./pages/library.md  library.xslt library.xml
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This applies the XSLT file to the XML file and through XSLT converts it to HTML. The output file is placed right in my pages folder where it gets rendered not only as a proper document but also according to my already defined stylesheet. I leave the output file, the HTML document, untouched.&lt;/p&gt;</content>
-		<link href="https://rilkean.com/xml-based-reading-log"/>
-		<id>https://rilkean.com/xml-based-reading-log</id>
+		<link href="https://apophatic.github.io/xml-based-reading-log"/>
+		<id>https://apophatic.github.io/xml-based-reading-log</id>
 		<updated>2023-11-16T10:00:00Z</updated>
 		<published>2023-11-16T10:00:00Z</published>
 	</entry>
@@ -117,8 +117,8 @@ export async function pollRSSFeeds({ lastRunAt }: Interval) {
   );
 }
 &lt;/code&gt;&lt;/pre&gt;</content>
-		<link href="https://rilkean.com/val-town-email-rss-feed"/>
-		<id>https://rilkean.com/val-town-email-rss-feed</id>
+		<link href="https://apophatic.github.io/val-town-email-rss-feed"/>
+		<id>https://apophatic.github.io/val-town-email-rss-feed</id>
 		<updated>2023-11-07T10:00:00Z</updated>
 		<published>2023-11-07T10:00:00Z</published>
 	</entry>
@@ -131,8 +131,8 @@ export async function pollRSSFeeds({ lastRunAt }: Interval) {
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Re-installing the necessary packages, I was not surprised to infer the large memory cost of modern web development, re: Node.js-based development:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;brew install node&lt;/code&gt; requires 58MB, not to mention its required dependencies which account for another ~242MB. Then there is &lt;code&gt;node_modules&lt;/code&gt; in an application, and all the &lt;code&gt;&amp;quot;dependencies&amp;quot;&lt;/code&gt; and &lt;code&gt;&amp;quot;devDependencies&amp;quot;&lt;/code&gt;, and their dependecies, ad infinitum. Regardless of the latter ending up in a &lt;code&gt;.gitignore&lt;/code&gt;, the memory requirements and complexity of modern web development is seemingly unnecessary.&lt;/p&gt;</content>
-		<link href="https://rilkean.com/the-cost-of-modern-webdev"/>
-		<id>https://rilkean.com/the-cost-of-modern-webdev</id>
+		<link href="https://apophatic.github.io/the-cost-of-modern-webdev"/>
+		<id>https://apophatic.github.io/the-cost-of-modern-webdev</id>
 		<updated>2023-10-17T10:00:00Z</updated>
 		<published>2023-10-17T10:00:00Z</published>
 	</entry>
@@ -193,8 +193,8 @@ export async function pollRSSFeeds({ lastRunAt }: Interval) {
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</content>
-		<link href="https://rilkean.com/philos-and-sophia-a"/>
-		<id>https://rilkean.com/philos-and-sophia-a</id>
+		<link href="https://apophatic.github.io/philos-and-sophia-a"/>
+		<id>https://apophatic.github.io/philos-and-sophia-a</id>
 		<updated>2023-10-09T10:00:00Z</updated>
 		<published>2023-10-09T10:00:00Z</published>
 	</entry>
@@ -215,8 +215,8 @@ export async function pollRSSFeeds({ lastRunAt }: Interval) {
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;LaTeX versus Typst almost feels like a battle between ancient and modern philosophers. Jokingly, shall we say: &lt;em&gt;The safest general characterization of the typesetting system tradition is that it consists of a series of footnotes to TeX?&lt;/em&gt;  But for now, I&#39;m going to be using Typst exclusively. Although, given how new it is, I wouldn&#39;t be surprised in significant shortcomings.&lt;/p&gt;</content>
-		<link href="https://rilkean.com/from-latex-to-typst"/>
-		<id>https://rilkean.com/from-latex-to-typst</id>
+		<link href="https://apophatic.github.io/from-latex-to-typst"/>
+		<id>https://apophatic.github.io/from-latex-to-typst</id>
 		<updated>2023-11-13T10:00:00Z</updated>
 		<published>2023-11-13T10:00:00Z</published>
 	</entry>
@@ -280,8 +280,8 @@ img:after {
 &lt;p&gt;The result for an image not found locally of the Milky Way Galaxy:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;../public/images/milky-way-galaxy.jpg&quot; alt=&quot;Milky Way Galaxy&quot; title=&quot;Milky Way Galaxy&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;This is a lot better than the default.&lt;/p&gt;</content>
-		<link href="https://rilkean.com/accessible-images-after"/>
-		<id>https://rilkean.com/accessible-images-after</id>
+		<link href="https://apophatic.github.io/accessible-images-after"/>
+		<id>https://apophatic.github.io/accessible-images-after</id>
 		<updated>2023-10-23T10:00:00Z</updated>
 		<published>2023-10-23T10:00:00Z</published>
 	</entry>
@@ -316,8 +316,8 @@ img:after {
     content: &amp;quot;\2197&amp;quot;;
 }
 &lt;/code&gt;&lt;/pre&gt;</content>
-		<link href="https://rilkean.com/accessible-hyperlinks-after"/>
-		<id>https://rilkean.com/accessible-hyperlinks-after</id>
+		<link href="https://apophatic.github.io/accessible-hyperlinks-after"/>
+		<id>https://apophatic.github.io/accessible-hyperlinks-after</id>
 		<updated>2023-10-05T10:00:00Z</updated>
 		<published>2023-10-05T10:00:00Z</published>
 	</entry>
@@ -338,8 +338,8 @@ img:after {
     outline: 1px dotted #853d97;
 }
 &lt;/code&gt;&lt;/pre&gt;</content>
-		<link href="https://rilkean.com/accessible-hyperlinks-active"/>
-		<id>https://rilkean.com/accessible-hyperlinks-active</id>
+		<link href="https://apophatic.github.io/accessible-hyperlinks-active"/>
+		<id>https://apophatic.github.io/accessible-hyperlinks-active</id>
 		<updated>2023-10-21T10:00:00Z</updated>
 		<published>2023-10-21T10:00:00Z</published>
 	</entry>
