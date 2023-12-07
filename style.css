@@ -175,7 +175,7 @@ nav a:link {
 
 nav a:hover {
   color: var(--nc-lk-3);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 nav a:visited {
@@ -202,7 +202,6 @@ footer a:active {
   outline: 1px solid var(--nc-lk-3);
 }
 
-
 abbr:hover {
   /* Set the '?' cursor while hovering an abbreviation */
   cursor: help;
@@ -211,7 +210,7 @@ abbr:hover {
 blockquote {
   padding: 1.5rem;
   background: var(--nc-bg-2);
-  border-left: 6px solid var(--nc-bg-3);
+  border-left: 5px solid var(--nc-bg-3);
 }
 
 abbr {
@@ -226,8 +225,7 @@ blockquote *:last-child {
 header {
   background: var(--nc-bg-2);
   border-bottom: 1px solid var(--nc-bg-3);
-  padding: 0.8rem 1.5rem;
-  font-size: 110%;
+  padding: 2rem 1.5rem;
   
   /* This sets the right and left margins to cancel out the body's margins. It's width is still the same, but the background stretches across the page's width. */
 
@@ -250,6 +248,10 @@ header h2,
 header h3 {
   padding-bottom: 0;
   border-bottom: 0;
+}
+
+header nav h3 {
+  display: inline;
 }
 
 header > *:first-child {
@@ -525,5 +527,5 @@ img::after {
 footer {
   display: flex;
   justify-content: center;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
