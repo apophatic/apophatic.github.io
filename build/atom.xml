@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title></title>
 	<link href="https://apophatic.github.io/atom.xml" rel="self" />
-	<updated>2023-12-07T04:58:30Z</updated>
+	<updated>2023-12-11T07:00:46Z</updated>
 	<author>
 		<name>apophatic</name>
 	</author>
-	<id>https://apophatic.github.io,2023-12-07:default-atom-feed/</id>
+	<id>https://apophatic.github.io,2023-12-11:default-atom-feed/</id>
 	<entry>
 		<title>xml-based library</title>
 		<content type="html">&lt;h1&gt;xml-based library&lt;/h1&gt;
@@ -197,6 +197,16 @@ export async function pollRSSFeeds({ lastRunAt }: Interval) {
 		<id>https://apophatic.github.io/philos-and-sophia-a</id>
 		<updated>2023-10-09T10:00:00Z</updated>
 		<published>2023-10-09T10:00:00Z</published>
+	</entry>
+	<entry>
+		<title>interaction-heavy, information-weak</title>
+		<content type="html">&lt;h1&gt;interaction-heavy, information-weak&lt;/h1&gt;
+&lt;p&gt;2023-12-11&lt;/p&gt;
+&lt;p&gt;What makes accessibility so difficult is the thin-line it operates in so as not to fall under this all too common software curse of being interaction-heavy and information-weak. The user&#39;s intention, I argue, lies, most of the time, outside interactivity. Interaction in accessibility must obviously be critical since the degree of perspective is heightened but otherwise, interaction must be enjoyable and educational. If none of the forementioned, it only casts negatively on information software.&lt;/p&gt;</content>
+		<link href="https://apophatic.github.io/interaction-heavy-information-weak"/>
+		<id>https://apophatic.github.io/interaction-heavy-information-weak</id>
+		<updated>2023-12-11T10:00:00Z</updated>
+		<published>2023-12-11T10:00:00Z</published>
 	</entry>
 	<entry>
 		<title>from latex to typst</title>
