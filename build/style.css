@@ -34,6 +34,12 @@
   box-sizing:border-box;
 }
 
+::selection {
+  /* Set background color for selected text */
+  background: var(--nc-ac-1);
+  color: var(--nc-ac-tx);
+}
+
 html,input,select,button {
   font-family: var(--nc-font-sans);
 }
@@ -41,10 +47,13 @@ html,input,select,button {
 body{
   background: var(--nc-bg-1);
   color: var(--nc-tx-2);
-  margin:0 auto;
-  max-width:650px;
-  padding:1rem;
+  margin: 0 auto;
+  max-width: 650px;
+  padding: 1rem;
   letter-spacing: 1px;
+  overflow-x: hidden;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 header {
@@ -113,9 +122,9 @@ img {
 }
 
 blockquote {
-  padding: 0.0rem 0.8rem;
+  padding: 0.1rem 0.8rem;
   background: var(--nc-bg-2);
-  border-left: 8px solid var(--nc-bg-3);
+  border-left: 6px solid var(--nc-bg-3);
 }
 
 pre {
