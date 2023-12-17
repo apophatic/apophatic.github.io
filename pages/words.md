@@ -1,6 +1,6 @@
 # words
 
-A list of interesting words I come across, continually updated.
+A list of interesting words I come across while reading on the desktop or the web that I did not know of or knew little about beforehand, continually updated.
 
 ---
 

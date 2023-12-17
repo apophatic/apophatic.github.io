@@ -56,6 +56,15 @@ body{
   overflow-wrap: break-word;
 }
 
+abbr {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+
+hr {
+  border-color: gray;
+}
+
 header {
   background: var(--nc-bg-2);
   border-bottom: 1px solid var(--nc-bg-3);
