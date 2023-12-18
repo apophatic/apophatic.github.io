@@ -1,6 +1,6 @@
 # uses
 
-Inspired by [Uses This](https://usesthis.com), the following, which helps with a sense of intentionality by laying them out, is a list of the tools I use in a somewhat regular occurence, directly or indirectly, with a couple redacted for privacy purposes.
+Inspired by [Uses This](https://usesthis.com), the following, which, by being transparent, helps with a sense of intentionality, is a list of the tools I use in a somewhat regular occurence, directly or indirectly, with a couple redacted for privacy purposes.
 
 ---
 
@@ -34,6 +34,7 @@ Inspired by [Uses This](https://usesthis.com), the following, which helps with a
   - Vimium
 - **Code forge:** GitHub
 - **Document editor:** Typst
+- **Cloud storage:** Filen
 - **Literary resources:** 
   - Anna's Archive
   - Stanford Encyclopedia of Philosophy (SEP)

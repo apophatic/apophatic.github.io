@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>brain dump</title>
 	<link href="https://apophatic.github.io/atom.xml" rel="self" />
-	<updated>2023-12-17T13:32:01Z</updated>
+	<updated>2023-12-18T08:11:42Z</updated>
 	<author>
 		<name>apophatic</name>
 	</author>
-	<id>https://apophatic.github.io,2023-12-17:default-atom-feed/</id>
+	<id>https://apophatic.github.io,2023-12-18:default-atom-feed/</id>
 	<entry>
 		<title>xml-based library</title>
 		<content type="html">&lt;h1&gt;xml-based library&lt;/h1&gt;

@@ -7,47 +7,22 @@
 <h1>library</h1>
 <p>A list of some of my favorite creative works.</p>
 <hr>
-<h3>books</h3>
-<table>
-<tr>
-<th>title</th>
-<th>author</th>
-<th>year</th>
-</tr>
-<tr>
-<td>Rilke's Book of Hours: Love Poems to God</td>
-<td>Rainer Maria Rilke</td>
-<td>1905</td>
-</tr>
-<tr>
-<td>Voices</td>
-<td>Antonio Porchia</td>
-<td>1969</td>
-</tr>
-<tr>
-<td>God In Our Hands</td>
-<td>Graham Shaw</td>
-<td>1987</td>
-</tr>
-</table>
-<h3>films</h3>
-<table>
-<tr>
-<th>title</th>
-<th>director</th>
-<th>year</th>
-</tr>
-<tr>
-<td>Institute Benjamenta, or This Dream People Call Human Life</td>
-<td>Brothers Quay</td>
-<td>1995</td>
-</tr>
-<tr>
-<td>Ordet</td>
-<td>Carl Theodor Dreyer</td>
-<td>1955</td>
-</tr>
-</table>
+<h2>books</h2>
+<ul>
+<li>Rilke, Rainer Maria: <em>The Book of Hours</em>
+</li>
+<li>Cioran, Emil: <em>Tears and Saints</em>
+</li>
+</ul>
+<h2>movies</h2>
+<ul>
+<li>Quay Brothers: <em>Institute Benjamenta, or This Dream People Call Human Life</em>
+</li>
+<li>Dreyer, Carl Theodor: <em>Ordet</em>
+</li>
+<li>Wenders, Wim: <em>Wings of Desire</em>
+</li>
+</ul>
 </body>
 <script>document.title = "library";</script>
 </html>

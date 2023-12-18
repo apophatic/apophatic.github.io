@@ -10,36 +10,22 @@
 		<h1>library</h1>
 		<p>A list of some of my favorite creative works.</p>
 		<hr/>
-		<h3>books</h3>
-			<table>
-      			<tr>
-        			<th>title</th>
-        			<th>author</th>
-        			<th>year</th>
-      			</tr>
-      			<xsl:for-each select="library/book">
-      			<tr>
-        			<td><xsl:value-of select="title"/></td>
-        			<td><xsl:value-of select="author"/></td>
-        			<td><xsl:value-of select="year"/></td>
-      			</tr>
-      			</xsl:for-each>
-    		</table>
-    	<h3>films</h3>
-			<table>
-      			<tr>
-        			<th>title</th>
-        			<th>director</th>
-        			<th>year</th>
-      			</tr>
-      			<xsl:for-each select="library/film">
-      			<tr>
-        			<td><xsl:value-of select="title"/></td>
-        			<td><xsl:value-of select="director"/></td>
-        			<td><xsl:value-of select="year"/></td>
-      			</tr>
-      			</xsl:for-each>
-    		</table>
+		<h2>books</h2>
+		<ul>
+			<xsl:for-each select="library/book">
+			<li>
+				<xsl:value-of select="author"/>: <em><xsl:value-of select="title"/></em>
+			</li>
+			</xsl:for-each>
+		</ul>
+		<h2>movies</h2>
+		<ul>
+			<xsl:for-each select="library/film">
+			<li>
+				<xsl:value-of select="director"/>: <em><xsl:value-of select="title"/></em>
+			</li>
+			</xsl:for-each>
+		</ul>
 	</body>
 	<script>document.title = "library";</script>
 	</html>
