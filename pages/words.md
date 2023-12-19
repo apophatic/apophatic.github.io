@@ -170,3 +170,4 @@ A list of interesting words I have come across while reading on desktop or the w
 - seance
 - neurasthenia
 - ecumenical
+- enjambment

@@ -26,7 +26,7 @@ index_html() {
 	while read -r f title created; do
 		link=$(echo "$f" | gsed -E 's|.*/(.*).md|\1/|')
 		created=$(echo $(head -3 "$f" | tail -1))
-	 	echo "<li>$created<br/> <a href=\"$link\">$title</a></li>"
+	 	echo "<li>$created <br> <a href=\"$link\">$title</a></li>"
 	done < "$1" | sort -r
 
 	echo "</ul>"
