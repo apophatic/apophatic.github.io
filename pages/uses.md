@@ -22,9 +22,8 @@ Inspired by [Uses This](https://usesthis.com), the following, which, by being tr
   - **Version control system:** Git 
   - **Package manager:** Homebrew
 - **Password manager:** KeePassXC
-- **Nameserver:** NextDNS
 - **PDF viewer:** Preview.app
-- **Music streaming client:** Tidal
+- **Universal Command Palette:** Shortcat
 
 ## browser software
 - **Browser extensions:**
@@ -35,7 +34,4 @@ Inspired by [Uses This](https://usesthis.com), the following, which, by being tr
 - **Code forge:** GitHub
 - **Document editor:** Typst
 - **Cloud storage:** Filen
-- **Literary resources:** 
-  - Anna's Archive
-  - Stanford Encyclopedia of Philosophy (SEP)
-- **Film streaming client:** Criterion Channel
+- **Literary resource:** Anna's Archive

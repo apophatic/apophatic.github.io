@@ -1,5 +1,5 @@
 # brain dump
 
-Dilettantish notes on <abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr>, JavaScript, and Accessibility.
+topics: <abbr title="HyperText Markup Language">html</abbr>, <abbr title="Cascading Style Sheets">css</abbr>, <abbr title="JavaScript">js</abbr>, & accessibility
 
 <hr/>

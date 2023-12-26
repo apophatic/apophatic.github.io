@@ -4,7 +4,7 @@
 
 **Note:** This is an alternate form of the unnecessarily-unstyled-in a-critical-manner broken image logo and, if added, alternate text we typically see for offline images. This doesn't affect Safari-like browsers.
 
-Styling the `img` element to account for offline images–e.g., if (1) the image path is not found, (2) the image has been deleted, (3) the connection has been broken and the image did not load, (4) the webmaster is forbidding the image to load, and so on–is a great accessibility practice.
+Styling the `img` element to account for offline images–e.g., if the image path is not found, if the image has been deleted, if the connection has been broken and the image did not load, if the webmaster is forbidding the image to load, and so on–is a great accessibility practice.
 
 Like we thought for [accessible externally-pointing hyperlinks](/accessible-hyperlinks-after), our thinking is similar here: what we are interested in is the *after-the-matter*, i.e., `:after`.
 

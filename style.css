@@ -1,73 +1,69 @@
 @font-face {
-  font-family: Dosis;
-  src: url(./public/font/Dosis/Dosis-VariableFont_wght.ttf) format(truetype);
-}
-@font-face {
   font-family: Sono;
   src: url(./public/font/Sono/Sono-VariableFont_MONO,wght.ttf) format(truetype);
-}
-@font-face {
-  font-family: Bellefair;
-  src: url(./public/font/bellefair/webfonts/bellefair-latin-400-normal.woff2) format(woff2),
-    url(./public/font/bellefair/webfonts/bellefair-latin-400-normal.woff) format(woff);
-}
-
-:root {
-  --nc-font-sans: Dosis, sans-serif;
-  --nc-font-serif: Bellefair, serif;
-  --nc-font-mono: Sono, monospace;
-
-  --nc-tx-1: #ffcccc;
-  --nc-tx-2: #ffcccc;
-  --nc-bg-1: #201318;
-  --nc-bg-2: #381525;
-  --nc-bg-3: #4D122F;
-  --nc-lk-1: #ba55d3;
-  --nc-lk-2: #ba55d3;
-  --nc-lk-3: #FA8072;
-  --nc-lk-tx: #FFFFFF;
-  --nc-ac-1: #800080;
-  --nc-ac-tx: #ffcccc;
-}
-
-::selection {
-  background: var(--nc-ac-1);
-  color: var(--nc-ac-tx);
 }
 
 * {
   box-sizing: border-box;
 }
 
-html {
-  font-family: var(--nc-font-sans);
+::selection {
+  background: #800080;
+  color: #ffcccc;
 }
 
 body{
-  background: var(--nc-bg-1);
-  color: var(--nc-tx-2);
+  background: #201318;
+  color: #ffcccc;
+  font-family: Sono, monospace;
   margin: 0 auto;
   max-width: 650px;
   padding: 1rem;
-  letter-spacing: 1px;
   overflow-x: hidden;
   word-break: break-word;
   overflow-wrap: break-word;
 }
 
-abbr {
-  text-decoration: underline;
-  text-decoration-style: dotted;
+nav a:link, footer a:link {
+  color: #FA8072;
 }
 
-hr {
-  border-width: 2px;
-  border-color: #000;
+nav a:hover, footer a:hover  {
+  color: #FA8072;
+}
+
+nav a:visited, footer a:visited {
+  color: #FA8072;
+}
+
+nav a:active, footer a:active {
+  outline: 1px dotted #FA8072;
+}
+
+a:link {
+  color: #ba55d3;
+}
+
+a:hover {
+  color: #ba55d3;
+}
+
+a:visited {
+  color: #ba55d3;
+}
+
+a:active {
+  outline: 1px dotted #ba55d3;
+}
+
+a[href*="//"]::after {
+  /* north east arrow */
+  content: "\2197";
 }
 
 header {
-  background: var(--nc-bg-2);
-  border-bottom: 2px solid var(--nc-bg-3);
+  background: #381525;
+  border-bottom: 2px solid #4D122F;
   padding: 0.8rem;
 
   margin: -1rem calc(50% - 50vw) 1rem;
@@ -76,88 +72,39 @@ header {
   padding-right: calc(50vw - 50%);
 }
 
-nav a:link, footer a:link {
-  color: var(--nc-lk-3);
-}
-
-nav a:hover, footer a:hover  {
-  color: var(--nc-lk-3);
-}
-
-nav a:visited, footer a:visited {
-  color: var(--nc-lk-3);
-}
-
-nav a:active, footer a:active {
-  outline: 1px dotted var(--nc-lk-3);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--nc-font-serif);
-  letter-spacing: normal;
-  font-weight: normal;
-}
-
-a:link {
-  color: var(--nc-lk-1);
-}
-
-a:hover {
-  color: var(--nc-lk-2);
-}
-
-a:visited {
-  color: var(--nc-lk-1);
-}
-
-a:active {
-  outline: 1px dotted var(--nc-lk-1);
-}
-
-a[href*="//"]::after {
-  font-family: var(--nc-font-mono);
-  font-size: 1rem;
-  /* north east arrow */
-  content: "\2197";
-}
-
-span {
-  font-family: var(--nc-font-mono);
-  font-size: 1rem;
+hr {
+  border-color: #ffcccc;
 }
 
 img {
-  max-width:100%;
+  max-width: 100%;
 }
 
 blockquote {
-  padding: 0rem 0.8rem;
-  background: var(--nc-bg-2);
-  border-left: 6px solid var(--nc-bg-3);
+  padding: 0.2rem 0.8rem;
+  background: #381525;
+  border-left: 4px solid #4D122F;
 }
 
 pre {
   overflow:auto;
-  padding: 0.1rem 0.4rem;
+  padding: 0.4rem 0.8rem;
 }
 
 code,
 pre,
 kbd,
 samp {
-  /* Set the font family for monospaced elements */
-  font-family: var(--nc-font-mono);
-  font-size: 85%;
-  letter-spacing: 0;
-  background: var(--nc-bg-2);
-  border: 1px solid var(--nc-bg-3);
+  font-family: Sono, monospace;
+  font-size: 92%;
+  background: #381525;
+  border: 1px solid #4D122F;
   border-radius: 4px;
 }
 
 pre code {
   /* When <code> is in a <pre>, reset it's formatting to blend in */
   background: inherit;
-  font-size: 90%;
   color: inherit;
   border: 0;
   padding: 0;
@@ -168,7 +115,6 @@ code pre {
   /* When <pre> is in a <code>, reset it's formatting to blend in */
   display: inline;
   background: inherit;
-  font-size: 85%;
   color: inherit;
   border: 0;
   padding: 0;
