@@ -1,69 +1,49 @@
-@font-face {
-  font-family: Sono;
-  src: url(./public/font/Sono/Sono-VariableFont_MONO,wght.ttf) format(truetype);
-}
-
 * {
   box-sizing: border-box;
 }
 
 ::selection {
-  background: #800080;
-  color: #ffcccc;
+  background: #ffff00;
 }
 
 body{
-  background: #201318;
-  color: #ffcccc;
-  font-family: Sono, monospace;
+  font-family: sans-serif;
   margin: 0 auto;
   max-width: 650px;
   padding: 1rem;
+  line-height: 1.2;
   overflow-x: hidden;
   word-break: break-word;
   overflow-wrap: break-word;
 }
 
-nav a:link, footer a:link {
-  color: #FA8072;
-}
-
-nav a:hover, footer a:hover  {
-  color: #FA8072;
-}
-
-nav a:visited, footer a:visited {
-  color: #FA8072;
-}
-
-nav a:active, footer a:active {
-  outline: 1px dotted #FA8072;
-}
-
 a:link {
-  color: #ba55d3;
+  color: #0000ff;
 }
 
 a:hover {
-  color: #ba55d3;
+  color: #0000ff;
 }
 
 a:visited {
-  color: #ba55d3;
+  color: #0000ff;
 }
 
 a:active {
-  outline: 1px dotted #ba55d3;
+  color: #ff0000;
+  outline: 1px solid #ff0000;
 }
 
 a[href*="//"]::after {
+  font-size: 1rem;
+  font-family: monospace;
   /* north east arrow */
   content: "\2197";
 }
 
 header {
-  background: #381525;
-  border-bottom: 2px solid #4D122F;
+  background: #eee;
+  border-bottom: 2px solid #c0c0c0;
   padding: 0.8rem;
 
   margin: -1rem calc(50% - 50vw) 1rem;
@@ -72,18 +52,13 @@ header {
   padding-right: calc(50vw - 50%);
 }
 
-hr {
-  border-color: #ffcccc;
-}
-
 img {
   max-width: 100%;
 }
 
 blockquote {
-  padding: 0.2rem 0.8rem;
-  background: #381525;
-  border-left: 4px solid #4D122F;
+  padding: 0 0.8rem;
+  border-left: 4px solid #c0c0c0;
 }
 
 pre {
@@ -95,10 +70,9 @@ code,
 pre,
 kbd,
 samp {
-  font-family: Sono, monospace;
-  font-size: 92%;
-  background: #381525;
-  border: 1px solid #4D122F;
+  font-size: 105%;
+  background: #eee;
+  border: 1px solid #c0c0c0;
   border-radius: 4px;
 }
 
@@ -109,6 +83,7 @@ pre code {
   border: 0;
   padding: 0;
   margin: 0;
+  font-size: 96%;
 }
 
 code pre {

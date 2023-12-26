@@ -15,19 +15,19 @@ Inspired by [Uses This](https://usesthis.com), the following, which, by being tr
 - **Headphones:** AKG K371 Headphones Wired
 
 ## desktop software
-- **Browser:** Ungoogled Chromium
+- **Browser:** Firefox
 - **Text editor:** Sublime Text
+- **Task manager:** TextEdit.app
 - **Terminal:** Terminal.app
   - **Shell:** Bash
   - **Version control system:** Git 
   - **Package manager:** Homebrew
 - **Password manager:** KeePassXC
 - **PDF viewer:** Preview.app
-- **Universal Command Palette:** Shortcat
+- **Nameserver:** NextDNS
 
 ## browser software
 - **Browser extensions:**
-  - Chromium Web Store
   - uBlock Origin
   - KeePassXC-Browser
   - Vimium
