@@ -2,11 +2,203 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>brain dump</title>
 	<link href="https://apophatic.github.io/atom.xml" rel="self" />
-	<updated>2023-12-26T14:51:30Z</updated>
+	<updated>2024-01-03T01:38:00Z</updated>
 	<author>
 		<name>apophatic</name>
 	</author>
-	<id>https://apophatic.github.io,2023-12-26:default-atom-feed/</id>
+	<id>https://apophatic.github.io,2024-01-03:default-atom-feed/</id>
+	<entry>
+		<title>xml-based library</title>
+		<content type="html">&lt;h1&gt;xml-based library&lt;/h1&gt;
+&lt;p&gt;2023-11-16&lt;/p&gt;
+&lt;p&gt;There is a new page on this site, &lt;a href=&quot;/library&quot;&gt;the library page&lt;/a&gt;, which is a list of some of my favorite creative works in a table format. The source of the library page is an XML document, albeit, a fairly simple one at the moment:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-xml&quot;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+&amp;lt;library&amp;gt;
+	&amp;lt;book category=&amp;quot;theology&amp;quot;&amp;gt;
+		&amp;lt;title&amp;gt;God In Our Hands&amp;lt;/title&amp;gt;
+		&amp;lt;author&amp;gt;Graham Shaw&amp;lt;/author&amp;gt;
+		&amp;lt;publisher&amp;gt;SCM Press&amp;lt;/publisher&amp;gt;
+		&amp;lt;year&amp;gt;1987&amp;lt;/year&amp;gt;
+		&amp;lt;read&amp;gt;Fall 2023&amp;lt;/read&amp;gt;
+	&amp;lt;/book&amp;gt;
+&amp;lt;/library&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As usual, convert the XML to XSLT:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-xml&quot;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+&amp;lt;xsl:stylesheet version=&amp;quot;1.0&amp;quot; xmlns:xsl=&amp;quot;http://www.w3.org/1999/XSL/Transform&amp;quot;&amp;gt;
+&amp;lt;xsl:template match=&amp;quot;/&amp;quot;&amp;gt;
+	&amp;lt;html&amp;gt;
+	&amp;lt;head&amp;gt;
+		&amp;lt;title&amp;gt;library&amp;lt;/title&amp;gt;
+	&amp;lt;/head&amp;gt;
+	&amp;lt;body&amp;gt;
+		&amp;lt;h1&amp;gt;library&amp;lt;/h1&amp;gt;
+		&amp;lt;p&amp;gt;A list of some of my favorite creative works.
+		&amp;lt;/p&amp;gt;
+		&amp;lt;hr/&amp;gt;
+		&amp;lt;table&amp;gt;
+      		&amp;lt;tr&amp;gt;
+        		&amp;lt;th&amp;gt;title&amp;lt;/th&amp;gt;
+    			&amp;lt;th&amp;gt;author&amp;lt;/th&amp;gt;
+    			&amp;lt;th&amp;gt;publisher&amp;lt;/th&amp;gt;
+    			&amp;lt;th&amp;gt;year&amp;lt;/th&amp;gt;
+    			&amp;lt;th&amp;gt;read&amp;lt;/th&amp;gt;
+      		&amp;lt;/tr&amp;gt;
+      		&amp;lt;xsl:for-each select=&amp;quot;library/book&amp;quot;&amp;gt;
+      		&amp;lt;tr&amp;gt;
+    			&amp;lt;td&amp;gt;&amp;lt;xsl:value-of select=&amp;quot;title&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
+    			&amp;lt;td&amp;gt;&amp;lt;xsl:value-of select=&amp;quot;author&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
+    			&amp;lt;td&amp;gt;&amp;lt;xsl:value-of select=&amp;quot;publisher&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
+    			&amp;lt;td&amp;gt;&amp;lt;xsl:value-of select=&amp;quot;year&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
+    			&amp;lt;td&amp;gt;&amp;lt;xsl:value-of select=&amp;quot;read&amp;quot;/&amp;gt;&amp;lt;/td&amp;gt;
+      		&amp;lt;/tr&amp;gt;
+      		&amp;lt;/xsl:for-each&amp;gt;
+   		&amp;lt;/table&amp;gt;
+	&amp;lt;/body&amp;gt;
+	&amp;lt;/html&amp;gt;
+&amp;lt;/xsl:template&amp;gt;
+&amp;lt;/xsl:stylesheet&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Considering the structure of my website, the above two files, &lt;code&gt;library.xml&lt;/code&gt; and &lt;code&gt;library.xslt&lt;/code&gt; are standalone at the root of the website given they are unnecessary to the production of the website, i.e., they are not part of the makefile. This is logical: none of those files outputs to something web-friendly to display.&lt;/p&gt;
+&lt;p&gt;And therefore, a handy library already pre-installed in Unix-like operating systems: &lt;a href=&quot;https://opensource.apple.com/source/libxslt/libxslt-5/libxslt/doc/xsltproc.html&quot;&gt;xsltproc&lt;/a&gt;, a command line xslt processor.&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;xsltproc is a command line tool for applying XSLT stylesheets to XML documents. It is part of libxslt, the XSLT C library for GNOME. While it was developed as part of the GNOME project, it can operate independently of the GNOME desktop. &lt;/p&gt;
+&lt;p&gt;xsltproc is invoked from the command line with the name of the stylesheet to be used followed by the name of the file or files to which the stylesheet is to be applied.&lt;/p&gt;
+&lt;p&gt;If a stylesheet is included in an XML document with a Stylesheet Processing Instruction, no stylesheet need be named at the command line. xsltproc will automatically detect the included stylesheet and use it.&lt;/p&gt;
+&lt;p&gt;By default, output is to stdout. You can specify a file for output using the &lt;code&gt;-o&lt;/code&gt; option.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;At the root of my website:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;xsltproc -o ./pages/library.md  library.xslt library.xml
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This applies the XSLT file to the XML file and through XSLT converts it to HTML. The output file is placed right in my pages folder where it gets rendered not only as a proper document but also according to my already defined stylesheet. I leave the output file, the HTML document, untouched.&lt;/p&gt;</content>
+		<link href="https://apophatic.github.io/xml-based-reading-log"/>
+		<id>https://apophatic.github.io/xml-based-reading-log</id>
+		<updated>2023-11-16T10:00:00Z</updated>
+		<published>2023-11-16T10:00:00Z</published>
+	</entry>
+	<entry>
+		<title>val town email rss notifications</title>
+		<content type="html">&lt;h1&gt;val town email rss notifications&lt;/h1&gt;
+&lt;p&gt;2023-11-07&lt;/p&gt;
+&lt;p&gt;I&#39;ve tried different RSS clients over the years, e.g., two of my favorite clients are the web-client &lt;a href=&quot;https://bazqux.com/&quot;&gt;BazQux&lt;/a&gt; and the self-hostable &lt;a href=&quot;https://miniflux.app/&quot;&gt;Miniflux&lt;/a&gt;. While extremely useful, it never stuck in my workflow. It might be that my preference towards a minimal setup irked me away from using yet another application and service. What I haven&#39;t tried doing is using email for RSS notifications–of course, it&#39;s self-explanatory, i.e., see newsletters.&lt;/p&gt;
+&lt;p&gt;I&#39;ve playing with &lt;a href=&quot;https://www.val.town/&quot;&gt;Val Town&lt;/a&gt; these past few days and it seems like a fun, handy tool:
+&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;Val Town is a social website to write, run, and deploy code. Vals are small JavaScript/TypeScript snippets that run on our servers. You can create APIs, scheduled functions, email yourself, and persist small pieces of data — all from the browser.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;First and foremost, inferring that my particular feeds are different from others, I create my first ever val, rssFeeds. An &lt;code&gt;Object&lt;/code&gt; type containing keyed collections:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;export const rssFeeds = {
+  	Evonomics: &amp;quot;https://evonomics.com/feed/&amp;quot;
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, the fun begins. After reading through some vals, there are a couple that I need. &lt;/p&gt;
+&lt;p&gt;Luckily, Val Town has it&#39;s own &lt;a href=&quot;https://www.val.town/u/std&quot;&gt;standard library&lt;/a&gt; with helpful vals like &lt;a href=&quot;https://www.val.town/v/std/email&quot;&gt;std.email&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;@std.email is the web-standard and more powerful replacement for console.email.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;As you notice the email val references other vals like the val for parsing a SendGrid email. &lt;/p&gt;
+&lt;p&gt;Another val I need is newRSSItems. Again, you see this val reference another val to fetch the RSS which references other vals to parse the XML and fetch the text, which the latter references the standard library&#39;s fetch val and another normalize the URL val. This is pretty cool! &quot;[A] network of atomic actions you can stack like Lego blocks.&quot;&lt;/p&gt;
+&lt;p&gt;To tie things up, you guessed it, I use some code from yet another val, pollRSSFeeds:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;import { email } from &amp;quot;https://esm.town/v/std/email?v=11&amp;quot;;
+import { newRSSItems } from &amp;quot;https://esm.town/v/stevekrouse/newRSSItems&amp;quot;;
+import { rssFeeds } from &amp;quot;https://esm.town/v/johndoe/rssFeeds&amp;quot;;
+
+export async function pollRSSFeeds({ lastRunAt }: Interval) {
+  return Promise.all(
+    Object.entries(rssFeeds).map(async ([name, url]) =&amp;gt; {
+      let items = await newRSSItems({
+        url,
+        lastRunAt,
+      });
+      if (items.length)
+        await email({
+          text: JSON.stringify(items, null, 2),
+          subject: `New from ${name} RSS`,
+        });
+      return { name, items };
+    }),
+  );
+}
+&lt;/code&gt;&lt;/pre&gt;</content>
+		<link href="https://apophatic.github.io/val-town-email-rss-feed"/>
+		<id>https://apophatic.github.io/val-town-email-rss-feed</id>
+		<updated>2023-11-07T10:00:00Z</updated>
+		<published>2023-11-07T10:00:00Z</published>
+	</entry>
+	<entry>
+		<title>the cost of modern webdev</title>
+		<content type="html">&lt;h1&gt;the cost of modern webdev&lt;/h1&gt;
+&lt;p&gt;2023-10-17&lt;/p&gt;
+&lt;p&gt;I was un-installing unnecessary packages I had installed with &lt;code&gt;brew&lt;/code&gt; and realized there were far too many to account for. Instead of going through each package in &lt;code&gt;brew list&lt;/code&gt; and looking up the respective purpose, I decided to purge the entire formulae:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;brew remove --force $(brew list --formula)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Re-installing the necessary packages, I was not surprised to infer the large memory cost of modern web development, i.e., Node.js-based development:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;brew install node&lt;/code&gt; requires 58MB, not to mention its required dependencies which account for another 242MB. Furthermore, there is &lt;code&gt;node_modules&lt;/code&gt; in a said application, and all the &lt;code&gt;&amp;quot;dependencies&amp;quot;&lt;/code&gt; and &lt;code&gt;&amp;quot;devDependencies&amp;quot;&lt;/code&gt;, and their dependencies, ad infinitum. Regardless of the latter ending up in a &lt;code&gt;.gitignore&lt;/code&gt;, the memory requirements of modern web development is seemingly complex.&lt;/p&gt;
+&lt;p&gt;All the above is after experiencing installing &lt;code&gt;node&lt;/code&gt; via &lt;code&gt;brew&lt;/code&gt; on a no-longer-supported-operating-system by &lt;code&gt;brew&lt;/code&gt; and having to wait for a long time for &lt;code&gt;node&lt;/code&gt;&#39;s &lt;code&gt;make&lt;/code&gt; to complete.&lt;/p&gt;</content>
+		<link href="https://apophatic.github.io/the-cost-of-modern-webdev"/>
+		<id>https://apophatic.github.io/the-cost-of-modern-webdev</id>
+		<updated>2023-10-17T10:00:00Z</updated>
+		<published>2023-10-17T10:00:00Z</published>
+	</entry>
+	<entry>
+		<title>philos and sophia (a)</title>
+		<content type="html">&lt;h1&gt;philos and sophia (a)&lt;/h1&gt;
+&lt;p&gt;2023-10-09&lt;/p&gt;
+&lt;p&gt;The beginning of a new series, going from A-to-Z, pointing to ten interesting philosophy(-deriving) links. Although, truth be told, it might be that laying them out here is better than keeping them bookmarked.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Duration_(philosophy)&quot;&gt;Duration (Philosophy)&lt;/a&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;Duration is a theory of time and consciousness posited by the French philosopher Henri Bergson. Bergson sought to improve upon inadequacies he perceived in the philosophy of Herbert Spencer, due, he believed, to Spencer&#39;s lack of comprehension of mechanics, which led Bergson to the conclusion that time eluded mathematics and science. Bergson became aware that the moment one attempted to measure a moment, it would be gone: one measures an immobile, complete line, whereas time is mobile and incomplete. For the individual, time may speed up or slow down, whereas, for science, it would remain the same. Hence Bergson decided to explore the inner life of man, which is a kind of duration, neither a unity nor a quantitative multiplicity. Duration is ineffable and can only be shown indirectly through images that can never reveal a complete picture. It can only be grasped through a simple intuition of the imagination.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Carl_Gustav_Carus&quot;&gt;Carl Gustav Carus&lt;/a&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;Carl Gustav Carus (3 January 1789 – 28 July 1869) was a German physiologist and painter, born in Leipzig, who played various roles during the Romantic era. A friend of the writer Johann Wolfgang von Goethe, he was a many-sided man: a doctor, a naturalist, a scientist, a psychologist, and a landscape painter who studied under Caspar David Friedrich.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Ancient_Egyptian_conception_of_the_soul&quot;&gt;Ancient Egyptian conception of the soul&lt;/a&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;According to ancient Egyptian creation myths, the god Atum created the world out of chaos, utilizing his own magic. Because the earth was created with magic, Egyptians believed that the world was imbued with magic and so was every living thing upon it. When humans were created, that magic took the form of the soul, an eternal force which resided in and with every human. The concept of the soul and the parts which encompass it has varied from the Old Kingdom to the New Kingdom, at times changing from one dynasty to another, from five parts to more.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Doubting_Thomas&quot;&gt;Doubting Thomas&lt;/a&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;A doubting Thomas is a skeptic who refuses to believe without direct personal experience – a reference to the Gospel of John&#39;s depiction of the Apostle Thomas, who, in John&#39;s account, refused to believe the resurrected Jesus had appeared to the ten other apostles until he could see and feel Jesus&#39;s crucifixion wounds.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Eternal_statement&quot;&gt;Eternal statement&lt;/a&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;An eternal statement is a statement whose token instances all have the same truth value. For instance, every inscription or utterance of the sentence &quot;On July 15, 2009 it rains in Boston&quot; has the same truth value, no matter when or where it is asserted. This type of statement is distinguished from others in that its context will not influence its truth value. Essentially, an eternal statement is a true statement, regardless of how it used.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Cosmicism&quot;&gt;Cosmicism&lt;/a&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;Cosmicism is the literary philosophy developed and used by the American writer H. P. Lovecraft in his fiction. Lovecraft was a writer of philosophically intense horror stories that involve occult phenomena like astral possession and alien miscegenation, and the themes of his fiction over time contributed to the development of this philosophy.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Liberation_theology&quot;&gt;Liberation theology&lt;/a&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;Liberation theology is a Christian theological approach emphasizing the liberation of the oppressed. It engages in socio-economic analyses, with social concern for the poor and political liberation for oppressed peoples and addresses other forms of inequality, such as race or caste.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://plato.stanford.edu/entries/ontological-arguments/&quot;&gt;Ontological Arguments&lt;/a&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;Ontological arguments are arguments, for the conclusion that God exists, from premises which are supposed to derive from some source other than observation of the world—e.g., from reason alone. In other words, ontological arguments are arguments from what are typically alleged to be none but analytic, a priori and necessary premises to the conclusion that God exists.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://plato.stanford.edu/entries/empedocles/&quot;&gt;Empedocles&lt;/a&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;In the middle of the fifth century BCE, Empedocles of Acragas formulated a philosophical program in hexameter verse that pioneered the influential four-part theory of roots (air, water, earth, and fire) along with two active principles of Love and Strife, which influenced later philosophy, medicine, mysticism, cosmology, and religion. The philosophical system responded to Parmenides’ rejection of change while embracing religious injunctions and magical practices. As a result, Empedocles has occupied a significant position in the history of Presocratic philosophy as a figure moving between mythos and logos, religion and science.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://plato.stanford.edu/entries/process-philosophy/&quot;&gt;Process Philosophy&lt;/a&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;Process philosophy is based on the premise that being is dynamic and that the dynamic nature of being should be the primary focus of any comprehensive philosophical account of reality and our place within it. Even though we experience our world and ourselves as continuously changing, Western metaphysics has long been obsessed with describing reality as an assembly of static individuals whose dynamic features are either taken to be mere appearances or ontologically secondary and derivative. For process philosophers the adventure of philosophy begins with a set of problems that traditional metaphysics marginalizes or even sidesteps altogether: what is dynamicity or becoming—if it is the way we experience reality, how should we interpret this metaphysically? Are there several varieties of becoming—for instance, the uniform going on of activities versus the coming about of developments? Do all developments have the same way of occurring quite independently of what is coming about? How can we best classify into different kinds of occurrences? How can we understand the emergence of apparently novel conditions? Can we conceive of becoming or dynamic being independently of space and time?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content>
+		<link href="https://apophatic.github.io/philos-and-sophia-a"/>
+		<id>https://apophatic.github.io/philos-and-sophia-a</id>
+		<updated>2023-10-09T10:00:00Z</updated>
+		<published>2023-10-09T10:00:00Z</published>
+	</entry>
 	<entry>
 		<title>interaction-heavy, information-weak</title>
 		<content type="html">&lt;h1&gt;interaction-heavy, information-weak&lt;/h1&gt;
@@ -16,6 +208,28 @@
 		<id>https://apophatic.github.io/interaction-heavy-information-weak</id>
 		<updated>2023-12-11T10:00:00Z</updated>
 		<published>2023-12-11T10:00:00Z</published>
+	</entry>
+	<entry>
+		<title>from latex to typst</title>
+		<content type="html">&lt;h1&gt;from latex to typst&lt;/h1&gt;
+&lt;p&gt;2023-11-13&lt;/p&gt;
+&lt;p&gt;For as long as I remember, I&#39;ve been using LaTeX, the typesetting system, for updating my résumé. My editor of choice was, not the web-based editor &lt;a href=&quot;https://www.overleaf.com/&quot;&gt;Overleaf&lt;/a&gt;, but rather, the University of Oregon&#39;s &lt;a href=&quot;https://pages.uoregon.edu/koch/&quot;&gt;Richard Koch&#39;s&lt;/a&gt; &lt;a href=&quot;https://pages.uoregon.edu/koch/texshop/&quot;&gt;TeXShop&lt;/a&gt;–initially released in 2000. &lt;/p&gt;
+&lt;p&gt;It was always fun and interesting looking up solutions on the &lt;a href=&quot;https://tex.stackexchange.com/&quot;&gt;TeX Stack Exchange&lt;/a&gt; for things I wanted to do but would quickly run into a wall trying to do. I mean, there is seemingly a high amount of material relating to TeX on the web that one is bound to find a solution to their problem quickly or eventually. And anyways, there is &lt;a href=&quot;https://www.ctan.org/&quot;&gt;CTAN&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;The Comprehensive TEX Archive Network (CTAN) is the central place for all kinds of material around TEX. CTAN has currently 6511 packages. 2955 contributors have contributed to it. Most of the packages are free and can be downloaded and used immediately.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;On the other hand, I came across &lt;a href=&quot;https://typst.app&quot;&gt;Typst&lt;/a&gt;, a brand new typesetting system, a few months ago but it wasn&#39;t until a few nights that I played around with it. The Typst web-based editor and documentation were a breeze to work with. It might be that since I never had a web-based editor (e.g., Overleaf) workflow for working with LaTeX, I never realized the easy possibility of fledging out a fairly customized document quickly (i.e., without &lt;em&gt;building the document&lt;/em&gt; as you do on TeXShop). &lt;/p&gt;
+&lt;p&gt;But I think what I like most about Typst is its syntax. The below shows what creating a simple rule looks like, which one may easily decipher:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-typst&quot;&gt;#show heading.where(
+  level: 2
+): it =&amp;gt; {
+  smallcaps(it)
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;LaTeX versus Typst almost feels like a battle between ancient and modern philosophers. Jokingly, shall we say: &lt;em&gt;The safest general characterization of the typesetting system tradition is that it consists of a series of footnotes to TeX?&lt;/em&gt;  But for now, I&#39;m going to be using Typst exclusively. Although, given how new it is, I wouldn&#39;t be surprised in significant shortcomings.&lt;/p&gt;</content>
+		<link href="https://apophatic.github.io/from-latex-to-typst"/>
+		<id>https://apophatic.github.io/from-latex-to-typst</id>
+		<updated>2023-11-13T10:00:00Z</updated>
+		<published>2023-11-13T10:00:00Z</published>
 	</entry>
 	<entry>
 		<title>accessible images: :after</title>

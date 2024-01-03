@@ -17,7 +17,7 @@ Inspired by [Uses This](https://usesthis.com), the following, which, by being tr
 ## desktop software
 - **Browser:** Firefox
 - **Text editor:** Sublime Text
-- **Task manager:** TextEdit.app
+- **Knowledge base:** Obsidian
 - **Terminal:** Terminal.app
   - **Shell:** Bash
   - **Version control system:** Git 

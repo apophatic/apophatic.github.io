@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name=robots content="noindex, noarchive">
+	<link rel="icon" href="data:,">
+	<title>the cost of modern webdev</title>
+	<link rel="stylesheet" type="text/css" href="/style.css">
+	<link href="https://apophatic.github.io/atom.xml" type="application/atom+xml" rel="alternate" title="Atom feed for log posts">
+</head>
+<header>
+	<nav>
+		<a href="/">index</a> - <a href="/uses/">uses</a> - <a href="/words/">words</a> - <a href="https://github.com/apophatic?tab=repositories">repositories</a>
+	</nav>
+</header>
+<main><h1>the cost of modern webdev</h1>
+<p>2023-10-17</p>
+<p>I was un-installing unnecessary packages I had installed with <code>brew</code> and realized there were far too many to account for. Instead of going through each package in <code>brew list</code> and looking up the respective purpose, I decided to purge the entire formulae:</p>
+<pre><code class="language-bash">brew remove --force $(brew list --formula)
+</code></pre>
+<p>Re-installing the necessary packages, I was not surprised to infer the large memory cost of modern web development, i.e., Node.js-based development:</p>
+<p><code>brew install node</code> requires 58MB, not to mention its required dependencies which account for another 242MB. Furthermore, there is <code>node_modules</code> in a said application, and all the <code>&quot;dependencies&quot;</code> and <code>&quot;devDependencies&quot;</code>, and their dependencies, ad infinitum. Regardless of the latter ending up in a <code>.gitignore</code>, the memory requirements of modern web development is seemingly complex.</p>
+<p>All the above is after experiencing installing <code>node</code> via <code>brew</code> on a no-longer-supported-operating-system by <code>brew</code> and having to wait for a long time for <code>node</code>'s <code>make</code> to complete.</p>
+<hr>
+<footer role="contentinfo">
+    <small><a href="#top"><span>&uarr;</span> back to the top</a></small>
+
+    <small><a href="/atom.xml">atom feed</a>
+    </small>
+</footer>
