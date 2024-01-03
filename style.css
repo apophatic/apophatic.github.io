@@ -53,8 +53,6 @@ a:active {
 }
 
 a[href*="//"]::after {
-  font-size: 1.1rem;
-  font-family: monospace;
   /* north east arrow */
   content: "\2197";
 }
